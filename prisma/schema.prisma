@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Merchant {
+  id               Int      @id @default(autoincrement())
+  username         String   @unique
+  email            String   @unique
+  businessType     String  
+  shopName         String
+  password         String   @default("")
+  shopAddress      String
+  liveLocation     String
+  storeLogo        Json?
+  storePhotos      Json?
+  merchantId       String
+  userMobileNumber String
+  googleLogin      Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  admin            Boolean  @default(true)
+  users            User[]   @relation("MerchantUsers")
+}
+
+model User {
+  id               Int      @id @default(autoincrement())
+  username         String   @unique
+  email            String   @unique
+  password         String
+  photo            String?  // Optional field for user photo
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  
+  // Permissions
+  canManageInventory Boolean @default(false)
+  canPlaceOrders     Boolean @default(false)
+  canCreateBills      Boolean @default(false)
+  
+  // Foreign key to Merchant
+  merchantId        Int
+  merchant          Merchant @relation("MerchantUsers", fields: [merchantId], references: [id])
+}
+
