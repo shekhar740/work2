@@ -32,7 +32,7 @@ model User {
   username         String   @unique
   email            String   @unique
   password         String
-  photo            String?  // Optional field for user photo
+  photo            Json?  // Optional field for user photo
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
   

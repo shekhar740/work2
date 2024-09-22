@@ -20,14 +20,14 @@ async function handlePost(req: NextApiRequest, res: NextApiResponse) {
       if(!user){
         return res.status(404).json({message:"user not please re-register"});
       }
-      const passwordCheck = comparePassword(password,user.password)
     }else{
       // write code for customers
     }
-
     if(!user){
       return res.status(404).json("user not defined")
     }
+    // const chekPassword = 
+
     console.log("user detail",user);
     res.status(200).json({message:"successfully login"})
   } catch (error) {
@@ -37,6 +37,8 @@ async function handlePost(req: NextApiRequest, res: NextApiResponse) {
 
 }
 async function handleGet(req: NextApiRequest, res: NextApiResponse) {
+  const data = req;
+  console.log("headersdafd")
   return res.status(200).json({ message: "GET request received." });
 }
 

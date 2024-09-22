@@ -25,6 +25,8 @@ const authenticate = (handler: NextApiHandler) => {
       // Verify token
       const decoded = jwt.verify(token, SECRET_KEY);
       req.user = decoded; // Attach user info to request object
+
+      console.log("decoded datat",decoded);
       return handler(req, res);
     } catch (error) {
       return res.status(401).json({ message: 'Unauthorized' });

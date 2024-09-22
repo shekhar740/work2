@@ -1,6 +1,8 @@
 import { resend } from "@/config/email-config";
 import { prisma } from "@/config/prisma-config";
 import { EmailCredential } from "@/helper/email-credential";
+import message from "@/store/slices/message";
+import { MerchantUserPassword } from "@/utils/emails";
 import { generatePassword, hashPassword } from "@/utils/share-code";
 import { error } from "console";
 import { NextApiRequest, NextApiResponse } from "next";
@@ -42,23 +44,9 @@ async function handlePost(req: NextApiRequest, resp: NextApiResponse) {
                 storePhotos: storePhotos, // Assuming storePhotos is already in the correct format
             },
         });
-
-        // Send welcome email
-        const { data: emailData, error: emailError } = await resend.emails.send({
-            from: "Acme <onboarding@resend.dev>",
-            to: [email as string],
-            subject: "Welcome to Acme!",
-            react: EmailCredential({
-                username: username as string,
-                password: autoGeneratePassword,
-                email: email as string,
-            }),
-        });
-
-        // Check for email sending errors
-        if (emailError) {
-            console.error("Error sending credentials email:", emailError);
-            return resp.status(500).json({ message: "Error sending email", error: emailError });
+        const mesager = await MerchantUserPassword({to:email,autoGeneratePassword,subject:"Welcome Note",username,email});
+        if(!mesager?.success){
+            return resp.status(404).json({message:mesager.error})
         }
 
         return resp.status(200).json({ message: "You are registered successfully" });

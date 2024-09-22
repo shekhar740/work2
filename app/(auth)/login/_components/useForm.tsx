@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { loginUser } from "@/actions/auth";
+import axios from "axios";
 
 export const UseForm = () => {
   const [formData, setFormData] = useState({
@@ -45,6 +46,16 @@ export const UseForm = () => {
     e.preventDefault();
     mutation.mutate(formData); // Trigger the mutation
   };
+
+  const handleSave = async(e)=>{
+    e.preventDefault()
+    try {
+      const response = await axios.get("/api/users");
+      console.log("cooies",response);
+    } catch (error) {
+      console.log("errrp",error);
+    }
+  }
 
   return (
     <section id="login" className="bg-white rounded-lg md:p-5 p-2 md:px-10">
@@ -115,7 +126,9 @@ export const UseForm = () => {
             <p className="text-[11px] font-semibold">Remember for 30 days</p>
           </div>
         )}
-
+<Button onClick={handleSave}>
+  hwlo
+</Button>
         <Link
           href="/forgot"
           className="text-sm text-blue-600 mt-2 hover:text-blue-900 font-semibold underline text-end"
