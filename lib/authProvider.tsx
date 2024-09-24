@@ -1,45 +1,29 @@
+// middleware.ts
+import { NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
+import jwt from 'jsonwebtoken';
 
-'use client';
+export async function middleware(request: Request) {
+  const cookieStore = cookies();
+  const token = cookieStore.get('authToken')?.value;
 
-import { useEffect } from "react";
-import axios from "axios";
-import { useRouter } from "next/navigation";
+  // If there's no token, redirect to the login page
+  if (!token) {
+    return NextResponse.redirect(new URL('/login', request.url));
+  }
 
-interface AuthProviderProps {
-  children: React.ReactNode;
+  try {
+    // Verify the token (make sure to replace with your secret)
+    jwt.verify(token, process.env.JWT_SECRET!);
+    // If token is valid, allow the request to continue
+    return NextResponse.next();
+  } catch (err) {
+    // If token is invalid, redirect to the login page
+    return NextResponse.redirect(new URL('/login', request.url));
+  }
 }
 
-export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const router = useRouter();
-
-  useEffect(() => {
-    
-    const checkUserLoggedIn = async () => {
-      try {
-        const response = await axios.get("/api/frontend", {
-          withCredentials: true,
-        });
-
-        if (response.status === 200) {
-          // User is logged in, check the current path
-          const currentPath = window.location.pathname;
-          if (currentPath === '/login' || currentPath === '/register') {
-            window.history.back();
-          }
-        }
-      } catch (error) {
-        console.error(error);
-        // If the API call fails, ensure that the user is redirected if on a protected route
-        const currentPath = window.location.pathname;
-        if (currentPath !== '/login' && currentPath !== '/register') {
-          router.push('/login'); // Redirect to login page
-        }
-      }
-    };
-
-    checkUserLoggedIn();
-  }, [router]);
-
-
-  return <>{children}</>;
+// Define the paths where this middleware should run
+export const config = {
+  matcher: ['/dashboard/:path*', '/protected/:path*'], // Adjust paths as needed
 };

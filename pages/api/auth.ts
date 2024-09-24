@@ -1,4 +1,5 @@
 import { prisma } from "@/config/prisma-config";
+import { setCookie } from "@/helper/cookies";
 import { findMerchant, findUser } from "@/utils/backend/utils";
 import { comparePassword } from "@/utils/share-code";
 import { NextApiRequest, NextApiResponse } from "next";
@@ -26,9 +27,12 @@ async function handlePost(req: NextApiRequest, res: NextApiResponse) {
     if(!user){
       return res.status(404).json("user not defined")
     }
-    // const chekPassword = 
-
-    console.log("user detail",user);
+    // const checkpassword = await comparePassword(password,user.password);
+    const checkpassword = password === user.password;
+    if(!checkpassword){
+      res.status(404).json({message:"invalid password"})
+    }
+    const setCookies = await setCookie(res,{category,id : user.id,email : user.email,admin : user?.admin || false,password : user.password})
     res.status(200).json({message:"successfully login"})
   } catch (error) {
     console.error("Error during login:", error);

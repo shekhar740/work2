@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Roboto } from "@next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ReactQueryClientProviders } from "@/lib/react-query-client-provider";
-import { AuthProvider } from "@/lib/authProvider";
 
-
-// Define the custom fonts
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900", // Specify weight range
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900", // Specify weight range
+// Import the Roboto font
+const roboto = Roboto({
+  weight: ["400", "500", "700"], // Specify the weights you need
+  subsets: ["latin"], // Choose the subsets you want
+  variable: "--font-roboto", // Optional: use this variable to apply the font via CSS variable
 });
 
 // Metadata for the page
@@ -28,21 +21,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode; // Directly type the children prop
+  authToken: string;
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${roboto.variable} antialiased`}>
         <Toaster />
         <main>
-        <ReactQueryClientProviders>
-        {/* <AuthProvider> */}
-          {children}
-          {/* </AuthProvider>s */}
-          </ReactQueryClientProviders>
-          </main>
+          <ReactQueryClientProviders>{children}</ReactQueryClientProviders>
+        </main>
       </body>
     </html>
   );

@@ -15,14 +15,13 @@ export interface NextApiResponseWithToken extends NextApiResponse {
 const authenticate = (handler: NextApiHandler) => {
   return async (req: NextApiRequestWithToken, res: NextApiResponseWithToken) => {
     const { cookies } = req;
-    const token = cookies.authToken;
+   const token = cookies.authToken;
 
     if (!token) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
 
     try {
-      // Verify token
       const decoded = jwt.verify(token, SECRET_KEY);
       req.user = decoded; // Attach user info to request object
 

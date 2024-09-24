@@ -28,7 +28,6 @@ async function handlePost(req: NextApiRequest, resp: NextApiResponse) {
             return resp.status(409).json({ message: "User already exists." });
         }
 
-        // Create new merchant
         await prisma.merchant.create({
             data: {
                 email: email as string,
