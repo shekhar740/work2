@@ -57,17 +57,18 @@ export const comparePassword = async (
   }
 };
 
-const SECRET_KEY = process.env.SECRET_KEY || "your-secret-key";
+
 
 // Function to generate a JWT with a 1-hour expiration time
 export const generateToken = (payload: { [key: string]: any }) => {
-  const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "1h" });
+  console.log("Payload",payload)
+  const token = jwt.sign(payload, process.env.SECRET_KEY!, { expiresIn: "1h" });
   return token;
 };
 
 export const decodeToken = (token: string) => {
   try {
-    const decoded = jwt.verify(token, SECRET_KEY);
+    const decoded = jwt.verify(token,process.env.SECRET_KEY!);
     return decoded;
   } catch (error) {
     console.error("Invalid token:", error);

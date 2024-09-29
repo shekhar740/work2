@@ -7,9 +7,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 async function handlePost(req: NextApiRequest, res: NextApiResponse) {
   const { email } = req.body;
-
-  console.log("emia sing procssed")
-
   // Validate input
   if (!email) {
     return res.status(400).json({ error: "Missing email in request body" });

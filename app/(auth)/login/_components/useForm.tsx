@@ -2,37 +2,20 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaApple } from "react-icons/fa";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { loginUser } from "@/actions/auth";
 import axios from "axios";
-import jwt from "jsonwebtoken";
 
-export const UseForm = ({ token }: { token: any }) => {
+export const UseForm = () => {
   const [formData, setFormData] = useState({
     credential: "",
     password: "",
     checkBox: false,
     category: "user",
-    merchant: "",
+    merchantId: "",
   });
-  useEffect(() => {
-    async function settingToken() {
-      try {
-        console.log("tokensdf",token)
-        if (token) {
-          
-          const response = jwt.verify(token, process.env.NEXT_PUBLIC_SECRET_KEY!, { algorithms: ['HS256'] });
-          console.log("Verified token response:", response);
-        }
-      } catch (error) {
-        console.error("Token verification failed:", error,process.env.NEXT_PUBLIC_SECRET_KEY);
-      }
-    }
-
-    settingToken();
-  }, [token]);
 
   // UseMutation to handle login
   const mutation = useMutation({
@@ -47,10 +30,15 @@ export const UseForm = ({ token }: { token: any }) => {
 
   // Handle form inputs
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value, type, checked } = e.target;
-    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
 
   // Handle category change
@@ -64,58 +52,78 @@ export const UseForm = ({ token }: { token: any }) => {
     mutation.mutate(formData); // Trigger the mutation
   };
 
-  // Example of making an API call to check user data
-  const handleSave = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    try {
-      const response = await axios.get("/api/users");
-      console.log("User data:", response);
-    } catch (error) {
-      console.error("Error fetching user data:", error);
+  // Fetch user data (assuming this is your auth endpoint)
+  const {
+    data: values,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["auth"],
+    queryFn: () => axios.get("/api/auth").then((res) => res.data),
+  });
+  useEffect(() => {
+    if (values) {
+      setFormData((prev) => ({
+        ...prev,
+        credential: values?.decoded?.email || "",
+        password: values?.decoded?.password || "",
+        category: values?.decoded?.hasOwnProperty("admin")
+          ? "user"
+          : "merchant" || "",
+          merchantId : values.decoded?.admin
+      }));
     }
-  };
+  }, [values]);
+
 
   return (
     <section id="login" className="bg-white rounded-lg md:p-5 p-2 md:px-10">
       <div className="mt-5 flex flex-col gap-2">
         <h1 className="font-bold text-3xl text-center">Store Login</h1>
-        <p className="opacity-60 font-medium -tracking-tighter leading-5 max-w-[60%] m-auto text-center">
+        <p className="opacity-60 font-medium leading-5 max-w-[60%] m-auto text-center">
           Hey, Enter your details to sign in to your store account
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="mt-5 grid grid-cols-2 gap-2 items-center">
-        <select
-          name="category"
-          onChange={handleCategoryChange}
-          className="p-3 outline-none rounded-md"
-          value={formData.category}
-        >
-          <option value="user">User</option>
-          <option value="merchant">Merchant</option>
-        </select>
-
-        {formData.category === "merchant" ? (
-          <p className="col-span-2">Merchant-specific logic here</p>
-        ) : (
-          <input
-            type="text"
-            value={formData.merchant}
-            name="merchant"
-            placeholder="Admin credential..."
-            onChange={handleInputChange}
-            required
-            className="outline-none border-[1px] rounded-md border-opacity-0 p-2 w-full"
-          />
+      <form
+        onSubmit={handleSubmit}
+        className="mt-5 grid grid-cols-2 gap-2 items-center"
+      >
+        {values?.category !== "merchant" && (
+          <>
+            <select
+              name="category"
+              onChange={handleCategoryChange}
+              className="p-3 outline-none rounded-md"
+              value={formData.category}
+            >
+              <option value="merchant">Merchant</option>
+              <option value="user">User</option>
+            </select>
+            {
+              formData.category === "user" && (
+                <input
+                type="text"
+                value={formData.merchantId}
+                name="merchantId"
+                placeholder="Merchant credential..."
+                onChange={handleInputChange}
+                required
+                className="outline-none border-[1px] rounded-md p-2 w-full"
+              />
+              )
+            }
+          </>
         )}
 
         <input
           type="text"
           name="credential"
           placeholder="Enter email or phone number"
+          value={formData.credential}
           onChange={handleInputChange}
           required
-          className="col-span-2 outline-none border-[1px] rounded-md border-opacity-0 p-2 w-full"
+          className="col-span-2 outline-none border-[1px] rounded-md p-2 w-full"
         />
 
         <input
@@ -125,27 +133,19 @@ export const UseForm = ({ token }: { token: any }) => {
           onChange={handleInputChange}
           placeholder="Password"
           required
-          className="col-span-2 outline-none border-[1px] rounded-md border-opacity-0 p-2 w-full mt-3"
+          className="col-span-2 outline-none border-[1px] rounded-md p-2 w-full mt-3"
         />
 
-        {formData.category === "merchant" ? (
-          <p className="col-span-2">Merchant-specific logic here</p>
-        ) : (
-          <div className="flex items-center gap-2 mt-2 col-span-2">
-            <input
-              type="checkbox"
-              name="checkBox"
-              checked={formData.checkBox}
-              onChange={handleInputChange}
-              className="cursor-pointer"
-            />
-            <p className="text-[11px] font-semibold">Remember for 30 days</p>
-          </div>
-        )}
-
-        <Button onClick={handleSave} className="col-span-2">
-          Fetch Data
-        </Button>
+        <div className="flex items-center gap-2 mt-2 col-span-2">
+          <input
+            type="checkbox"
+            name="checkBox"
+            checked={formData.checkBox}
+            onChange={handleInputChange}
+            className="cursor-pointer"
+          />
+          <p className="text-[11px] font-semibold">Remember for 30 days</p>
+        </div>
 
         <Link
           href="/forgot"
@@ -153,10 +153,6 @@ export const UseForm = ({ token }: { token: any }) => {
         >
           Forgot Password
         </Link>
-
-        <p className="mt-8 text-sm opacity-40 hover:opacity-90 duration-700 ease-linear cursor-pointer underline col-span-2">
-          Having trouble signing in?
-        </p>
 
         <Button
           type="submit"
@@ -167,7 +163,9 @@ export const UseForm = ({ token }: { token: any }) => {
         </Button>
       </form>
 
-      <p className="text-sm mt-8 text-center opacity-60">---- Or Sign in with ----</p>
+      <p className="text-sm mt-8 text-center opacity-60">
+        ---- Or Sign in with ----
+      </p>
 
       <div className="mt-14 grid grid-cols-3 gap-2">
         <Button variant="ghost" className="border-2 flex gap-3">
@@ -180,10 +178,13 @@ export const UseForm = ({ token }: { token: any }) => {
           <FaApple /> <p>Apple</p>
         </Button>
       </div>
-      
+
       <h4 className="text-sm mt-14 text-center">
         Don't have an account?{" "}
-        <Link href="/auth/register" className="font-bold underline hover:opacity-60">
+        <Link
+          href="/auth/register"
+          className="font-bold underline hover:opacity-60"
+        >
           Register Here
         </Link>
       </h4>

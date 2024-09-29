@@ -4,7 +4,7 @@ import { NextApiResponse } from 'next';
 
 export const setCookie = (res: NextApiResponse, ...args: { [key: string]: any }[]) => {
   const { category, id, email, admin, password } = Object.assign({}, ...args);
-  const generatedToken = generateToken({ id, email, password });
+  const generatedToken = generateToken({ admin, email, password });
 
   if (admin) {
     res.setHeader(

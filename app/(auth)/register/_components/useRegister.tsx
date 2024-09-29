@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { FaApple, FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
@@ -14,6 +14,7 @@ import { useMutation } from "@tanstack/react-query";
 import { Registeruser } from "@/actions/auth";
 import { handleError } from "@/hook/erro";
 import { useRouter } from "next/navigation";
+import { fetchUserInfo } from "@/hook/api-call";
 
 export const RegisterPage = () => {
   const [logo, setLogo] = useState<File>();
@@ -146,7 +147,6 @@ export const RegisterPage = () => {
     // Call mutation with FormData
     mutation.mutate(data);
   };
-
   return (
     <section id="login" className="bg-white w-[600px] rounded-lg px-5 p-2">
       <div className="mt-5 flex flex-col gap-2">

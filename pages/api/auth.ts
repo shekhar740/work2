@@ -1,49 +1,80 @@
-import { prisma } from "@/config/prisma-config";
 import { setCookie } from "@/helper/cookies";
 import { findMerchant, findUser } from "@/utils/backend/utils";
-import { comparePassword } from "@/utils/share-code";
 import { NextApiRequest, NextApiResponse } from "next";
+import { comparePassword } from "@/utils/share-code";
+import jwt from "jsonwebtoken";
+import { sendErrorResponse } from "@/helper/return-statement";
 
 async function handlePost(req: NextApiRequest, res: NextApiResponse) {
-  const { credential, password, category,merchant } = req.body;
+  const { credential, password, merchantId } = req.body;
 
   try {
+    let merchant;
+    if (merchantId) {
+      merchant = await findMerchant(merchantId);
+    } else {
+      merchant = await findMerchant(credential);
+    }
+
+    if (!merchant) {
+      return sendErrorResponse(res, 404, "Invalid merchant details");
+    }
+
     let user;
-    if(category === "merchant"){
-      user = await findMerchant(credential);
-    }else if(category === 'user'){
-      console.log("is caegogy user")
-      const merchants = await findMerchant(merchant)
-      if(!merchants){
-        return res.status(404).json({message:"Invalid merchant Details"})
+    if (merchantId) {
+      user = await findUser(credential, merchant.id);
+      if (!user) {
+        return sendErrorResponse(res, 404, "Invalid user details");
       }
-      user = await findUser(credential,merchants.id)
-      if(!user){
-        return res.status(404).json({message:"user not please re-register"});
-      }
-    }else{
-      // write code for customers
+    } else {
+      user = merchant; // Assign merchant directly if no adminId
     }
-    if(!user){
-      return res.status(404).json("user not defined")
+    let compare: boolean;
+    if (password.length > 6) {
+      compare = user.password === password;
+    } else {
+      compare = await comparePassword(password, user.password);
     }
-    // const checkpassword = await comparePassword(password,user.password);
-    const checkpassword = password === user.password;
-    if(!checkpassword){
-      res.status(404).json({message:"invalid password"})
+    if (!compare) {
+      sendErrorResponse(res, 404, "Invalid Password");
     }
-    const setCookies = await setCookie(res,{category,id : user.id,email : user.email,admin : user?.admin || false,password : user.password})
-    res.status(200).json({message:"successfully login"})
+    if (user?.admin) {
+      await setCookie(res, {
+        email: user?.email,
+        password: user.password,
+        id: user?.id,
+      });
+    } else {
+      await setCookie(res, {
+        admin: merchant?.email,
+        email: user?.email,
+        password: user?.password,
+      });
+    }
+
+    return sendErrorResponse(res, 202, "successfully login credential");
   } catch (error) {
     console.error("Error during login:", error);
-    return res.status(500).json({ message: "Internal server error." });
+    return sendErrorResponse(res, 500, "Internal server error.");
   }
-
 }
+
 async function handleGet(req: NextApiRequest, res: NextApiResponse) {
-  const data = req;
-  console.log("headersdafd")
-  return res.status(200).json({ message: "GET request received." });
+  const token =
+    req.cookies?.authToken || req.headers.authorization?.split(" ")[1];
+
+  // Check if the cookie exists
+  if (!token) {
+    return res
+      .status(400)
+      .json({ message: "Authentication token is required." });
+  }
+  try {
+    const decoded = jwt.verify(token, process.env.SECRET_KEY!);
+    return res.status(200).json({ message: "succesfuly", decoded });
+  } catch (error) {
+    return res.status(400).json({ message: error });
+  }
 }
 
 export default async function handler(

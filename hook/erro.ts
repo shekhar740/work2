@@ -1,10 +1,10 @@
 import { registerSchema } from "@/lib/user-validataion";
 
 export const handleError = (verify: boolean, ...args: any[]) => {
-  // Check if OTP verification is necessary and valid
-  // if (!verify) {
-  //   return { title: "OTP Error", body: "OTP verification is necessary" };
-  // }
+
+  if (!verify) {
+    return { title: "OTP Error", body: "OTP verification is necessary" };
+  }
   const response = registerSchema.safeParse(args[0]);
 
   if (!response.success) {

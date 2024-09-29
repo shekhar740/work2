@@ -1,0 +1,1044 @@
+/**
+  * Name: 
+  * Version: 1.0
+  * Author: 
+  * Author:
+*/
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-Thin.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-Thin.ttf') format('truetype');
+    font-weight: thin;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-ThinOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-ThinOblique.ttf') format('truetype');
+    font-weight: thin 100;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-ExtraLight.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-ExtraLightOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-ExtraLightOblique.ttf') format('truetype');
+    font-weight: 200;
+    font-style: oblique;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-Light.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-Light.ttf') format('truetype');
+    font-weight: light 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-LightOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-LightOblique.ttf') format('truetype');
+    font-weight: light 300;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-Normal.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-Normal.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-NormalOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-NormalOblique.ttf') format('truetype');
+    font-weight: 400;
+    font-style: oblique;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-Medium.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-MediumOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: oblique;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-DemiBold.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-DemiBoldOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-DemiBoldOblique.ttf') format('truetype');
+    font-weight: 600;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-Bold.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-BoldOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-ExtraBold.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-ExtraBoldOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-ExtraBoldOblique.ttf') format('truetype');
+    font-weight: 800;
+    font-style: oblique;
+}
+
+
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-Heavy.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url('../fonts/articulate-cf-v3/ArticulatCF-HeavyOblique.otf') format('opentype'),
+         url('../fonts/articulate-cf-v3/ArticulatCF-HeavyOblique.ttf') format('truetype');
+    font-weight: 900;
+    font-style: oblique;
+}
+/* Reset CSS Start */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%; */
+	/* font:inherit; */
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a:focus {
+	outline: none;
+}
+
+body{
+	font-family: 'Articulat CF', sans-serif;
+}
+.tableau-lp{
+	background: linear-gradient(to right, #ffffff 0%, #ffffff 57%, #1B1D41 57%, #1B1D41 100%);
+    width: 100%;
+    float: none;
+      position: relative;
+}
+.bg-org a{
+    background: #FFEFE4;
+    display: inline-flex;
+    padding: 9px 32px;
+    border-radius: 63px;
+    align-items: center;
+    gap: 9px;
+}
+.bg-org img{
+	width: 45px;
+}
+.bg-org span.badge{
+	background: #E66F1A;
+    color: #fff;
+    padding: 6px 14px;
+    font-weight: normal;
+    border-radius: 14px;
+    font-size: 12px;
+}
+.bg-org p{
+    background: -webkit-linear-gradient(#E8A50C, #9C6D00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+}
+.tableau-lp .banner-image{}
+
+.tableau-lp  #form-section:before{
+	content:'';
+    display:block;
+}
+.tableau-lp:after{
+	
+}
+.tableau-lp:before{
+	content: '';
+    display: block;
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/banner-img-tableau-lp.png) no-repeat;
+    width: 57%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-position-y: bottom;
+}
+.tableau-lp.data-visualization-lp:before{
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/07/Tableau-data-visualization-1.jpg) no-repeat;
+    width:100%;
+    background-size: cover;
+}
+.tableau-lp.tableau-license-lp-lp:before{
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/07/Tableau-software-landing-page-1.jpg) no-repeat;
+    width:100%;
+    background-size: cover;
+}
+.tableau-lp.data-visualization-lp:before{
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/07/Tableau-data-visualization-1.jpg) no-repeat;
+}
+.tableau-lp.bi-dashboard-lp:before{
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/07/BI-Dashboard-LP-1.jpg) no-repeat;
+    width:100%;
+    background-size: cover;
+}
+
+#customer-form-24 {
+    background: rgb(255 255 255 / 80%);
+    padding: 20px;
+    box-shadow: 0px 0px 5px #c1c1c1;
+}
+.theme-btn-123{
+	background: #119BFF;
+    color: #fff;
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.theme-btn-123 img{
+	width: 20px;
+}
+.theme-btn-123:hover{
+  	background: #1b1d41;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.tableau-lp .sap-btn-primary{
+	background: #119BFF;
+    color: #fff;
+    /* font-size: 14px; */
+    /* font-weight: 500; */
+}
+
+
+.cta-banner-lp h4{
+	font-size: 26px;
+    color: #fff;
+    line-height: 31px;
+    margin-bottom: 18px;
+}
+.cta-banner-lp p{
+	color: #fff;
+}
+.cta-banner-lp{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/cta-banner-lp.png) no-repeat;
+    margin: 55px 0 0 0;
+    padding: 80px 40px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-size: cover;
+}
+.explore-deliver-sec{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/explore-raw-bg.png);
+    background-size: 92%;
+    padding: 100px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.explore-deliver-sec img{}
+.explore-deliver-sec h4{
+	color: #1A1C41;
+    font-size: 28px;
+    width: 75%;
+    margin: 0 auto;
+    font-weight: 600;
+    line-height: 32px;
+}
+.explore-deliver-sec p{}
+
+.cta-banner-lp-2{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/cta-banner-lp-2.png);
+    padding: 70px 0;
+    background-size: cover;
+}
+.why-choose-area .item:last-child:before{
+	display: none;
+}
+
+#tableau-lp-features{
+
+}
+#tableau-lp-features .owl-stage .owl-item {
+	background-color: #E8F4FF;
+}
+#tableau-lp-features  .ws-details p strong:after {
+	display:none;
+}
+#tableau-lp-features .owl-stage .owl-item li.item{
+	padding: 21px 20px !important;
+}
+#tableau-lp-features .owl-stage .owl-item p strong{
+	font-size: 17px;
+    color: #1A1C41;
+    margin-bottom: 5px!important;
+    display: block;}
+#tableau-lp-features .owl-stage .owl-item p {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#tableau-lp-features .owl-stage .owl-item li.item .d-flex{
+	align-items: flex-start!important;
+}
+.tableau-plans .card .card-img .badge{
+	position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.4rem;
+}
+.tableau-plans .card .card-img{
+	position: relative;
+}
+.cta-banner-lp-3{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/cta-banner-lp-3.png);
+    padding: 80px 0;
+    margin-top: 52px;
+    background-size: cover;
+}
+
+.analytics-busi-slider{
+	position: static;
+}
+.analytics-busi-slider .card{
+    background: #E8F4FF;
+    border: 0;
+    border-radius: 8px;
+    min-height: 318px;
+}
+.analytics-busi-slider .card .card-body{
+	
+}
+.analytics-busi-slider .card h2{
+	color: #D5EBFF;
+    font-size: 74px !important;
+    display: block;
+    font: caption;
+    font-weight: 600;
+}
+.analytics-busi-slider .card h4{
+	margin-top: 5px;
+    margin-bottom: 13px;
+}
+.analytics-busi-slider .card p{}
+.analytics-busi-slider .slick-slide {
+    margin: 0 10px;
+}
+.analytics-busi-slider .slick-list{
+	margin: 0 -10px;
+}
+.data-visualization-sec .container{
+	position: relative;
+}
+.analytics-busi-slider .slick-arrow{
+	font-size: 0px;
+    width: 30px;
+    height: 20px;
+}
+.analytics-busi-slider .slick-prev.slick-arrow{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/previous.png) no-repeat !important;
+    position: absolute;
+    left: -97%;
+    bottom: 0;
+}
+.analytics-busi-slider .slick-next.slick-arrow{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/next.png) no-repeat !important;
+    position: absolute;
+    left: -89%;
+    bottom: 0;
+}
+
+.cta-banner-lp-4{
+  	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/cta-banner-lp-4.png) no-repeat;
+  background-size: cover;
+}
+
+.testimonial-section-tabs{
+	padding: 70px 0 10px 0;
+}
+.testimonial-section-tabs ul.testimonial-tabs{
+	margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 7px;
+}
+.testimonial-section-tabs ul.testimonial-tabs li {
+    background-color: transparent;
+    color: #252525de;
+    background-color: #fff;
+    border: 1px solid #252525de;
+    padding: 17px 48px;
+    font-size: 16px;
+    font-weight: 500;
+  	cursor: pointer;
+}
+.testimonial-section-tabs ul.testimonial-tabs li.current {
+    border-color: #48a0d7;
+    background-color: #48a0d7;
+    color: #fff;
+}
+
+.testimonial-section-tabs .video-testimonial-slider .slick-slide,
+.testimonial-tab-area .text-testimonial-slider .slick-slide{
+  	margin: 0 15px;
+    overflow: hidden;
+}
+.testimonial-section-tabs .video-testimonial-slider .slick-list,
+.testimonial-tab-area .text-testimonial-slider .slick-list{
+  	margin: 0 -15px;
+}
+.testimonial-section-tabs .video-testimonial-slider .slick-slide a{
+	display: block;
+  	width: 100%;
+}
+.testimonial-section-tabs .video-testimonial-slider .slick-slide a img{
+	width: 100%;
+  	transition:0.3s ease-in-out;
+}
+.get-quote-btn{
+	border: 1px solid #000000;
+    color: #111111;
+    padding: 18px 42px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+ 	height: 56px;
+  	transition: 0.4s;
+}
+.get-quote-btn:hover{
+	transition: 0.4s;
+  	transform: scale(1.05);
+   	color: #111111;
+  	text-decoration: none;
+}
+.testimonial-section-tabs .video-testimonial-slider .slick-arrow,
+.testimonial-section-tabs .text-testimonial-slider .slick-arrow{display:none!important;}
+
+.testimonial-section-tabs .video-testimonial-slider .vdo-play-icon{
+	position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  	z-index:99;
+}
+.testimonial-section-tabs .video-testimonial-slider .vdo-play-icon img{
+	width:90px;
+}
+.testimonial-tab-area .nav-tabs{
+	border: 0px;
+    gap: 8px;
+    margin-bottom: 23px;
+}
+.testimonial-section-tabs .video-testimonial-slider .slick-slide a img:hover{
+	transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    -ms-transform: scale3d(1.1, 1.1, 1.1);
+  	transition:0.3s ease-in-out;
+}
+.testimonial-tab-area .nav-tabs li.nav-item{}
+.testimonial-tab-area .nav-tabs li.nav-item .nav-link{
+    border: 1px solid #151515;
+    border-radius: 0px;
+    padding: 16px 46px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.testimonial-tab-area .nav-tabs li.nav-item .nav-link.active{
+	background: #48a0d7;
+    border: 1px solid #48a0d7;
+}
+
+.testimonial-tab-area .text-testimonial-slider{}
+.testimonial-tab-area .text-testimonial-slider .text-slide-card{
+	background: #f6fbfd;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    min-height: 270px;
+}
+.testimonial-tab-area .text-testimonial-slider .text-slide-card p{
+
+}
+.testimonial-tab-area .text-testimonial-slider .text-slide-card .d-flex {
+	gap: 13px;
+  	align-items: center;
+}
+.testimonial-tab-area .text-testimonial-slider .text-slide-card .d-flex .img{
+
+}
+.testimonial-tab-area .text-testimonial-slider .text-slide-card .d-flex .text{
+
+}
+.testimonial-tab-area .text-testimonial-slider .text-slide-card .d-flex .text h4{
+	font-weight: bold;
+  	font-size: 19px;
+}
+.testimonial-tab-area  .text-testimonial-slider .text-slide-card .d-flex .text p{
+
+}
+
+.industry-logo-area .image-net-area{
+  	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.industry-logo-area .image-net-area .item{
+	width: 12.5%;
+    min-width: 12.5%;
+    height: 87px;
+    max-height: 82px;
+    transition: 0.3s ease-in-out;
+    background: #fff;
+}
+.industry-logo-area .image-net-area .item:hover{
+	transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 17px #00000029;
+}
+.industry-logo-area .image-net-area .item img{
+    width: 100%;
+    height: 80px;
+}
+.why-choose-area{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/why-choose-bg.png) no-repeat;
+  	background-size: cover;
+  	padding: 60px 0!important;
+}
+.why-choose-area .item-parent{}
+.why-choose-area .item{
+	 position: relative;	
+}
+.why-choose-area .item:before{
+	content: "";
+    display: block;
+    background: #fff9;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: -51%;
+}
+
+.testimonial-section-tabs{
+	position:relative;
+}
+.testimonial-section-tabs .decor{}
+.testimonial-section-tabs .decor li{
+	transition: 0.3s;
+  	width:65px;
+  	z-index:9;
+}
+.testimonial-section-tabs .decor li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.testimonial-section-tabs .decor li img{
+	width:100%;
+}
+.testimonial-section-tabs .decor li:nth-child(1){
+    position: absolute;
+    right: 89px;
+    top: 109px;
+}
+.testimonial-section-tabs .decor li:nth-child(2){
+    position: absolute;
+    right: 42%;
+    top: 15%;
+}
+.testimonial-section-tabs .decor li:nth-child(3){
+    position: absolute;
+    right: 7%;
+    top: 64%;
+}
+
+
+.explore-deliver-sec .img-box{
+	position: relative;
+}
+.explore-deliver-sec .img-box img{}
+.explore-deliver-sec .img-box .content h4{
+	color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
+.explore-deliver-sec .img-box.img-box-3 .content h4{
+	color: #4E3702;
+    font-weight: bold;
+}
+.explore-deliver-sec .img-box.img-box-2 .content h4{
+	font-size: 18px;
+    line-height: 21px;
+    background: -webkit-linear-gradient(#E8A50C, #9C6D00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+}
+.explore-deliver-sec .img-box.img-box-5 .content h4{
+	width: 100%;
+    color: #1A1C41;
+    font-weight: 800;
+}
+.explore-deliver-sec .img-box .content p{
+	
+}
+.explore-deliver-sec .img-box.img-box-1 .content{
+	position: absolute;
+    top: 35%;
+    right: 29px;
+    color: #fff;
+    text-align: center;
+}
+.explore-deliver-sec .img-box.img-box-2 .content{
+	position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    text-align: center;
+}
+.explore-deliver-sec .img-box.img-box-3 .content{
+	position: absolute;
+    top: 27%;
+    right: 26%;
+    text-align: center;
+}
+.explore-deliver-sec .img-box.img-box-4 .content{
+	position: absolute;
+    top: 50%;
+    right: 29px;
+}
+.explore-deliver-sec .img-box.img-box-5 .content{
+	position: absolute;
+    top: 11%;
+    right: 29px;
+    content: #1A1C41;
+    width: 74%;
+}
+.explore-deliver-sec .img-box h4{}
+.explore-deliver-sec .img-box p{}
+.explore-deliver-sec .img-box.img-box-1{
+	animation: zeven 5s linear 6s infinite;	
+}
+.explore-deliver-sec .img-box.img-box-2{
+	animation: zodd 5s linear 6s infinite
+}
+.explore-deliver-sec .img-box.img-box-3{animation: zeven 5s linear 6s infinite;	}
+.explore-deliver-sec .img-box.img-box-4{animation: zodd 5s linear 6s infinite}
+.explore-deliver-sec .img-box.img-box-5{animation: zeven 5s linear 6s infinite;	}
+
+@keyframes zeven {
+    0% {
+        transform: translate(0,0)
+    }
+
+    50% {
+        transform: translate(0,-14px)
+    }
+
+    100% {
+        transform: translate(0,0)
+    }
+}
+
+@keyframes zodd {
+    0% {
+        transform: translate(0,0)
+    }
+
+    50% {
+        transform: translate(0,14px)
+    }
+
+    100% {
+        transform: translate(0,0)
+    }
+}
+
+.reviews-section{
+	background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/review-sec-bg.png) no-repeat;
+  	background-size: cover;
+}
+.reviews-section img{
+	transition: 0.3s ease;
+}
+.reviews-section img:hover{
+	transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    -ms-transform: scale3d(1.1, 1.1, 1.1);
+    transition: 0.3s ease;
+}
+
+.analytics-sec-area{}
+.analytics-sec-area .analytics-everyone-box{
+	position: relative;
+}
+.analytics-sec-area .analytics-everyone-box{}
+.analytics-sec-area .analytics-everyone-box .anlytics-1{
+   	position: absolute;
+    color: #fff;
+    right: 10%;
+    top: 14%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.analytics-sec-area .analytics-everyone-box .anlytics-1 h4{
+	position: relative;
+}
+.analytics-sec-area .analytics-everyone-box .anlytics-1 h4:before{
+	content: "";
+    display: block;
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/decor-line-blue.png) no-repeat;
+    width: 120px;
+    background-size: 120px;
+    height: 5px;
+    position: absolute;
+    bottom: -13px;
+    right: 16px;
+}
+.analytics-sec-area .analytics-everyone-box .anlytics-2{
+    position: absolute;
+    bottom: 28px;
+    left: 30px;
+    gap: 21px;
+    display: flex;
+    align-items: center;
+}
+.analytics-sec-area .analytics-everyone-box .anlytics-2 h4{
+	position: relative;
+}
+.analytics-sec-area .analytics-everyone-box .anlytics-2 h4:before{
+	content: "";
+    display: block;
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/decor-line-orange.png) no-repeat;
+    width: 80px;
+    background-size: 80px;
+    height: 5px;
+    position: absolute;
+    bottom: -13px;
+    right: 16px;
+}
+ul.data-boxes {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  ul.data-boxes li {
+	display: flex;
+	/* width: calc((100% / 3) - (20px /3)); */
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	justify-content: start;
+	align-items: center;
+	background: #f7fcff;
+	border: 0.5px solid #aaaaaa;
+	border-radius: 3px;
+  }
+  ul.data-boxes li > img {
+	max-width: 36px;
+  }
+  ul.data-boxes li:nth-child(3n + 1) {
+	margin-left: 0;
+  }
+  .sap-pardot {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px 15px;
+}
+
+/* responsive css of the page */
+
+@media(max-width:768px){
+  .tableau-lp{background: #fcfeff;}
+  .tableau-lp #form-section{margin-top:20px;}
+  .bg-org {
+    padding: 9px 21px;
+    gap: 6px;
+}
+  .bg-org img {
+    width: 30px;
+}
+  .bg-org span.badge {
+    font-size: 10px;
+}
+  .bg-org p {
+    font-size: 16px;
+}
+.tableau-lp:before{display:none}
+  .explore-deliver-sec {
+    padding: 20px 0 40px 0;
+}
+  .explore-deliver-sec .img-box.img-box-2 {
+    margin-top: 20px !important;
+}
+  .explore-deliver-sec .img-box.img-box-3 {
+    margin-top: 30px !important;
+}
+  .explore-deliver-sec .img-box img {
+    width: 100%;
+}
+.cta-banner-lp-2{  padding: 40px 0;     background-position: bottom;}
+.cta-banner-lp-2 h4{    font-size: 19px;}
+.cta-banner-lp-2 p{    font-size: 15px;}
+.analytics-sec-area .analytics-everyone-box {
+    margin-top: 30px;
+}  
+.analytics-sec-area .analytics-everyone-box .anlytics-1 h4 {
+    position: relative;
+    font-size: 16px;
+}  
+.analytics-sec-area .analytics-everyone-box .anlytics-1 p{
+    font-size: 10px;
+    width: 94%;
+    line-height: 13px;
+}  
+.analytics-sec-area .analytics-everyone-box .anlytics-1 {
+    position: absolute;
+    color: #fff;
+    right: -10%;
+    top: 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}  
+.analytics-sec-area .analytics-everyone-box .anlytics-1 h4:before {
+    content: "";
+    display: block;
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/decor-line-blue.png) no-repeat;
+    width: 65px;
+    background-size: 68px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    right: 86px;
+}  
+.analytics-sec-area .analytics-everyone-box .anlytics-2 h4 {
+    position: relative;
+    font-size: 16px;
+}
+.analytics-sec-area .analytics-everyone-box .anlytics-2 p {
+    font-size: 11px;
+    width: 49%;
+    line-height: 13px;
+}
+.analytics-sec-area .analytics-everyone-box .anlytics-2 h4:before {
+    content: "";
+    display: block;
+    background: url(https://uneecops.com/lpage/wp-content/uploads/2024/04/decor-line-orange.png) no-repeat;
+    width: 43px;
+    background-size: 43px;
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+}  
+.analytics-sec-area .analytics-everyone-box .anlytics-2 {
+    position: absolute;
+    bottom: 18px;
+    left: 12px;
+    gap: 9px;
+    display: flex;
+    align-items: center;
+}  
+  .cta-banner-lp-3 {
+    padding: 30px 0;
+}
+.analytics-busi-slider {
+    position: static;
+    margin-top: 20px;
+}  
+  .cta-banner-lp-4{
+  	position:relative;
+  }
+  .cta-banner-lp-4:before {
+    content: "";
+    display: block;
+    background: #042847ba;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+  .cta-banner-lp-4 h4{
+  	    font-size: 22px;
+    line-height: 31px;
+  }
+  .cta-banner-lp-4 p{}
+  ul.decor{display:none;}
+  .testimonial-section-tabs{}
+  .testimonial-section-tabs h2{
+  	    font-size: 26px;
+    line-height: 30px;
+  }
+  .testimonial-section-tabs .d-flex.justify-content-between{
+  	    flex-direction: column;
+  }
+  .get-quote-btn {
+    border: 1px solid #000000;
+    color: #111111;
+    padding: 11px 26px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    height: 43px;
+    transition: 0.4s;
+    width: 148px;
+    text-align: center;
+}
+  .industry-logo-area .image-net-area {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+  .industry-logo-area .image-net-area .item {
+    width: 31%;
+    min-width: 12.5%;
+    height: 87px;
+    max-height: 82px;
+    transition: 0.3s ease-in-out;
+    background: #fff;
+}
+  .why-choose-area{
+  	    padding: 40px 0 !important;
+  }
+  .why-choose-area h2{
+  	line-height: 32px;
+    font-size: 23px;
+  }
+  .why-choose-area .d-flex.justify-content-around{
+  	flex-wrap: wrap;
+    gap: 25px;
+  }
+  .why-choose-area .d-flex.justify-content-around .align-items-center.d-flex.flex-column{
+  	width: 40%;
+  }
+  .why-choose-area .item:before{
+  	display: none;
+  }
+  
+  ul.data-boxes li {
+    width: calc(50% - 2.5px);
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  ul.data-boxes li:nth-child(2n+1){
+    margin-left: 0;
+  }
+  ul.data-boxes li span{
+    font-size: 12px;
+  }
+  .banner-strip {
+    display: flex;
+    justify-content: center;
+  }
+  .banner-strip img{
+    height: 24px;
+    max-width: none;
+  }
+
+  
+  
+}
+
+@media only screen and (max-width: 480px) {
+    .analytics-sec-area .analytics-everyone-box .anlytics-1{
+        right: 12%;
+    }
+    .analytics-sec-area .analytics-everyone-box .anlytics-1 h4:before{
+        right: 42px;
+    }
+    .analytics-sec-area .analytics-everyone-box .anlytics-2{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 375px) {
+    ul.data-boxes li{
+        padding: 10px 5px;
+    }
+}

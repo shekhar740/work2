@@ -1,12 +1,11 @@
-import { cookies } from "next/headers";
+import axios from "axios";
 import { UseForm } from "./_components/useForm";
 
-const LoginPage = () => {
-  const token = cookies().get("authToken")?.value;
+const LoginPage = async () => {
   return (
-    <div className="w-full grid place-content-center h-screen">
-      <div className="max-w-[600px]">
-        <UseForm token={JSON.stringify(token)} />
+    <div className="w-full grid place-content-center h-screen login-bg">
+      <div className="max-w-[600px] shadow-sm rounded-md shadow-yellow-50">
+        <UseForm  />
       </div>
     </div>
   );

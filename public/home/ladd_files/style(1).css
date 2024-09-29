@@ -1,0 +1,2236 @@
+.fs12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+.fw-medium {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: 700;
+}
+.fw-black {
+  font-weight: 900;
+}
+.bg-grey {
+  background-color: #fcfcfc;
+}
+
+.bg-blue {
+  background-color: #073674;
+}
+.dark-yellow {
+  color: #f2b84b;
+}
+.orange {
+  color: #e8762d;
+}
+.red {
+  color: #c72037;
+}
+.teal-green {
+  color: #5b879b;
+}
+
+ul.default {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+ul.default li {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  color: #343a40;
+  background: url("https://www.uneecops.com/wp-content/themes/uneecops/images/list-blue-tick.png")
+    no-repeat left center;
+}
+
+/* Explanatory Video */
+#explanatory-video {
+  float: left;
+  width: 100%;
+  background: #304ba2
+    url("https://www.uneecops.com/wp-content/themes/uneecops/images/explanatory-video-bg.jpg")
+    no-repeat center bottom;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.youtube {
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 20px 30px 0px rgba(0, 26, 26, 0.42);
+  -moz-box-shadow: 0px 20px 30px 0px rgba(0, 26, 26, 0.42);
+  box-shadow: 0px 20px 30px 0px rgba(0, 26, 26, 0.42);
+}
+
+.youtube iframe {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.youtube img {
+  width: 100%;
+}
+
+.youtube iframe,
+.youtube .play-button,
+.youtube .play-button:before {
+  position: absolute;
+}
+
+span.play-button {
+  display: flex;
+  width: 65px;
+  height: 65px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 25px;
+  position: absolute;
+  z-index: 9;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+span.play-button > i {
+  z-index: 9;
+  position: relative;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 26px;
+  border-color: transparent transparent transparent #000;
+  opacity: 0.75;
+}
+
+span.play-button:before {
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  animation: sonarWave 1.5s linear infinite;
+}
+
+span.play-button:after {
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  animation: sonarWave 2s linear infinite;
+}
+
+span.play-button:after,
+span.play-button:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Client Testimonials */
+
+section#client-tesimonials {
+  float: left;
+  width: 100%;
+  padding: 65px 0;
+  background: #f7f9fa;
+}
+
+ul#testimonials-slider {
+  float: left;
+}
+
+ul#testimonials-slider li {
+  float: left;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#testimonials-slider .owl-nav {
+  position: absolute;
+  right: 30px;
+  bottom: -20px;
+}
+
+#testimonials-slider .owl-nav button.owl-prev,
+#testimonials-slider .owl-nav button.owl-next {
+  width: 40px;
+  height: 40px;
+  background: #1290cf;
+  text-align: center;
+  line-height: 40px;
+}
+#testimonials-slider.tslide .owl-nav button.owl-prev,
+#testimonials-slider.tslide .owl-nav button.owl-next {
+  background: #e8762d;
+}
+#testimonials-slider .owl-nav button.owl-prev {
+  margin-right: 8px;
+}
+
+.nav-prev-icon,
+.nav-next-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-prev-icon {
+  background: url("https://www.uneecops.com/wp-content/themes/uneecops/images/small-btn-arrow-right.png")
+    no-repeat center center;
+  transform: rotate(-180deg);
+}
+
+.nav-next-icon {
+  background: url("https://www.uneecops.com/wp-content/themes/uneecops/images/small-btn-arrow-right.png")
+    no-repeat center center;
+}
+
+.testimonial-text {
+  float: left;
+  width: 100%;
+  background: #043673;
+  padding: 50px 55px;
+  color: #fff;
+  min-height: 350px;
+}
+
+.testimonial-video {
+  position: absolute;
+  width: calc(100% - 40%);
+  height: 100%;
+  background: #2a292e;
+  right: 0;
+  bottom: 0;
+}
+
+.ts-wrap {
+  float: left;
+  width: calc(100% - 60%);
+}
+
+.ct-heading {
+  margin-bottom: 30px;
+}
+
+.ts-title h5 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.ts-title span {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 16px;
+  position: relative;
+}
+
+.ts-title span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  height: 2px;
+  width: 20px;
+  background: #fff;
+}
+
+.ts-title {
+  margin-bottom: 20px;
+}
+
+.ts-wrap > p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 20px;
+  padding-right: 60px;
+}
+
+span.ts-client-name {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+span.ts-client-name i:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  top: 0;
+}
+
+span.ts-client-name:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background: #475ca9;
+  height: 100%;
+  top: 0;
+}
+
+.ts-client-name i {
+  position: relative;
+  z-index: 1;
+  background: #043673;
+  padding: 0 15px;
+}
+
+.ts-client > span.designation {
+  font-size: 14px;
+  line-height: 14px;
+  padding-left: 15px;
+}
+
+.ts-count {
+  position: absolute;
+  left: 55px;
+  bottom: 30px;
+}
+
+.ts-count > span {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+#testimonials-slider .youtube {
+  box-shadow: none;
+}
+
+/* Awards Start*/
+#inner-awards {
+  width: 100%;
+  float: left;
+  display: flex;
+  background: #f2f2f2
+    url("https://www.uneecops.com/wp-content/themes/uneecops/images/sap-pinnacle-award-img.png")
+    no-repeat left bottom;
+  background-size: 625px auto;
+}
+
+ul.award-list {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+ul.award-list li {
+  display: flex;
+  width: calc(100% / 3);
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border-left: 1px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+}
+
+ul.award-list li:nth-child(3n + 1) {
+  border-left: 0;
+}
+
+ul.award-list li:nth-child(-n + 3) {
+  border-top: 0;
+}
+
+/* Awards End */
+.bg-black {
+  background: #383838 !important;
+}
+
+ul.reason-list li {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+  width: calc((100% / 3) - 10px);
+  min-height: 200px;
+  flex-direction: column;
+  background: #fff;
+  margin-left: 15px;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+}
+
+ul.reason-list li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+ul.key-benefits.reason-list li {
+  width: calc((100% / 5) - 16px);
+  margin-left: 20px !important;
+  border-radius: 10px;
+}
+
+ul.key-benefits.reason-list li:nth-child(5n + 1) {
+  margin-left: 0 !important;
+}
+
+ul#industry-vertical {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul#industry-vertical > li {
+  width: calc((100% / 3) - 10px);
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#industry-vertical > li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+#industry-vertical > li:hover {
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+ul#industry-vertical > li .module-img img {
+  height: 42px;
+}
+
+.reason-list.uneecops-enable span.module-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+}
+
+#header .sap-erp-22 {
+  background: #eaeaea url("./images/sap-22-top-left-bg.jpg") no-repeat left
+    bottom;
+  background-size: contain;
+}
+#header .sap-erp-offer-22 {
+  background: #304ba8
+    url("./images/2022/sap-business-one-offer-22-banner-bg.jpg") no-repeat
+    center bottom;
+  background-size: cover;
+}
+
+#header .tableau-offer-22 {
+  background: #304ba8 url("./images/2022/tableau-offer-22-banner-bg.jpg")
+    no-repeat center bottom;
+  background-size: cover;
+}
+
+#header .out-body.sap-erp-22:before,
+#header .out-body.sap-erp-22:after {
+  background: none;
+}
+
+.linear-bg {
+  background: linear-gradient(
+    90deg,
+    #3860bb 15.25%,
+    rgba(203, 227, 255, 0.387107) 68.85%,
+    rgba(155, 206, 255, 0) 94.55%
+  );
+}
+
+.page-id-10 #explanatory-video,
+.page-id-13 #explanatory-video,
+.page-id-4786 #explanatory-video,
+.page-id-4791 #explanatory-video,
+.page-id-4796 #explanatory-video,
+#explanatory-video.exp-new,
+#wide-array-22 {
+  background: #e5e5e5;
+}
+
+ul#verticallist {
+  float: left;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul#verticallist li {
+  float: left;
+  width: calc(100% / 4);
+  border-left: 5px solid #e5e5e5;
+  border-bottom: 5px solid #e5e5e5;
+  background-color: #ffffff;
+}
+ul#verticallist li:nth-child(4n + 1) {
+  border-left: 0;
+}
+ul#verticallist li span {
+  position: relative;
+  display: flex;
+  padding: 0px 20px 0 60px;
+  font-size: 13px;
+  color: #4c4c4c;
+  text-transform: uppercase;
+  min-height: 57px;
+  align-items: center;
+  line-height: 18px;
+  background-color: #fff;
+  font-weight: 400;
+}
+
+ul#verticallist li:hover span[class*="icon-"] i {
+  /* -o-filter: brightness(0) invert(1);
+	-moz-filter: brightness(0) invert(1);
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1); */
+}
+
+ul#verticallist span[class*="icon-"] i {
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+}
+
+ul#verticallist li a {
+  text-decoration: none;
+}
+
+ul#verticallist li:hover span {
+  background-color: #ffb200;
+  /* color: #fff; */
+  transform: scale(1.03);
+  transition: all ease 0.3s;
+  z-index: 9;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 1px 3px 1px rgba(60, 64, 67, 0.149);
+}
+
+.icon-uneemanufacturing i {
+  background-image: url("images/industry-icons/icon-01.png");
+}
+
+.icon-uneepharma i {
+  background-image: url("images/industry-icons/icon-02.png");
+}
+
+.icon-uneefnb i {
+  background-image: url("images/industry-icons/icon-04.png");
+}
+
+.icon-uneemalls i {
+  background-image: url("images/industry-icons/icon-05.png");
+}
+
+.icon-uneecar i {
+  background-image: url("images/industry-icons/icon-06.png");
+}
+
+.icon-uneedairy i {
+  background-image: url("images/industry-icons/icon-07.png");
+}
+
+.icon-uneesports i {
+  background-image: url("images/industry-icons/icon-08.png");
+}
+
+.icon-uneelogistics i {
+  background-image: url("images/industry-icons/icon-09.png");
+}
+
+.icon-uneepublication i {
+  background-image: url("images/industry-icons/icon-10.png");
+}
+
+.icon-uneetrading i {
+  background-image: url("images/industry-icons/icon-11.png");
+}
+
+.icon-uneecity i {
+  background-image: url("images/industry-icons/icon-12.png");
+}
+
+.icon-uneepackaging i {
+  background-image: url("images/industry-icons/icon-13.png");
+}
+
+.icon-uneeautomotive i {
+  background-image: url("images/industry-icons/icon-14.png");
+}
+
+.icon-uneesystem i {
+  background-image: url("images/industry-icons/icon-09.png");
+}
+
+.icon-uneejewellery i {
+  background-image: url("images/industry-icons/icon-16.png");
+}
+
+.icon-uneeelectronics i {
+  background-image: url("images/industry-icons/icon-15.png");
+}
+
+.icon-uneeconstruction i {
+  background-image: url("images/industry-icons/icon-03.png");
+}
+
+.icon-uneeretail i {
+  background-image: url("images/industry-icons/icon-17.png");
+}
+
+.icon-uneechemical i {
+  background-image: url("images/industry-icons/icon-18.png");
+}
+
+.icon-uneeeducation i {
+  background-image: url("images/industry-icons/icon-19.png");
+}
+
+#why-choose-22 {
+  float: left;
+  width: 100%;
+  background: linear-gradient(284.86deg, #3aa1ff 21.9%, #1b389f 84.95%);
+  mix-blend-mode: normal;
+  opacity: 0.9;
+}
+
+ul#unee-stats-22 {
+  float: left;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul#unee-stats-22 li {
+  display: flex;
+  width: calc((100% / 3) - 10px);
+  background-color: #ffffff;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 15px;
+  justify-content: start;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 7px 4px 12px -3px rgba(0, 0, 0, 0.08);
+}
+
+ul#unee-stats-22 li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+ul#unee-stats-22 li:nth-child(-3 + n) {
+  margin-top: 0;
+}
+
+#trusted-indus-22,
+.sap-services-sec.sap-list-licence {
+  float: left;
+  width: 100%;
+}
+
+ul#partners-list li {
+  float: left;
+  margin: 0 27px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+ul#partners-list li a {
+  cursor: default;
+  pointer-events: none;
+}
+
+ul#partners-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inner-awards.inner-awards-22 {
+  background: #f2f2f2
+    url("https://www.uneecops.com/wp-content/themes/uneecops/images/sap-pinnacle-award-img.png")
+    no-repeat right -100px bottom -50px;
+  background-size: contain;
+}
+
+/* s4hana 2022 */
+.inner-body-22 section#inner-awards.inner-awards-22 {
+  position: relative;
+}
+
+.inner-body-22 section#inner-awards.inner-awards-22:before {
+  content: "";
+  width: 70%;
+  background: #009fd6;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.fs42 {
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.fs46 {
+  font-size: 46px;
+}
+
+.lh30 {
+  line-height: 30px;
+}
+
+.lh26 {
+  line-height: 26px;
+}
+
+.inner-body-22 {
+  background: #fff;
+  max-width: 1522px;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+}
+
+.sap-s4hana {
+  background: #eaeaea url("./images/2022/sap-s4hana-top-bg.png") no-repeat
+    center center;
+  background-size: cover;
+}
+
+#top-logo {
+  padding: 15px 0;
+}
+
+.sap-s4hana #form-section {
+  background-color: transparent;
+  padding: 70px 0;
+}
+
+#customer-form-22.sap-22 {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about-s4hana {
+}
+
+.equilock-h {
+  border-top: 7px solid #00a2dc;
+  border-bottom: 7px solid #00a2dc;
+}
+
+.equilock-sm {
+  border-top: 4.5px solid #00a2dc;
+  border-bottom: 4.5px solid #00a2dc;
+}
+.bg-light-blue{
+    background-color: #00a2dc;
+}
+
+.enabling-blue {
+  color: #00a2dc;
+}
+
+.uneecops-blue {
+  color: #043673;
+}
+
+.magenta {
+  color: #8a1d59;
+}
+
+#s4hana-features {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#s4hana-features li {
+  width: calc((100% / 3) - (40px / 3));
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid #3a5fe4;
+  margin-left: 20px;
+  margin-top: 20px;
+  box-shadow: 7px 4px 9px -1px rgba(0, 0, 0, 0.09);
+}
+
+#s4hana-features li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+#s4hana-features li .icon {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+#s4hana-features li .icon:before {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: #008066;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#s4hana-features.list-5 {
+  justify-content: center;
+}
+
+#s4hana-features.list-5 li {
+  width: calc((100% / 5) - 12px);
+  margin-left: 15px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 9%);
+  text-align: center;
+}
+
+#s4hana-features.list-5 li:nth-child(3n + 1) {
+  margin-left: 15px;
+}
+
+#s4hana-features.list-5 li:nth-child(5n + 1) {
+  margin-left: 0;
+}
+
+#s4hana-features.byd-3 li {
+  padding: 15px;
+  text-align: center;
+}
+
+#s4hana-automation,
+#get-in-touch {
+  background: rgb(13, 136, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 136, 128, 1) 0%,
+    rgba(20, 160, 217, 1) 100%
+  );
+}
+
+#s4hana-automation ul.default li {
+  font-size: 20px;
+  line-height: 28px;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+#s4hana-automation ul.default li:last-child {
+  margin-bottom: 0;
+}
+
+#why-choose-ubs {
+  background: rgb(32, 60, 116);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 60, 116, 1) 0%,
+    rgba(18, 147, 209, 1) 100%
+  );
+}
+
+#ubs-stats {
+  display: flex;
+  padding: 30px 0;
+  border-top: 15px solid #213c73;
+  border-bottom: 15px solid #213c73;
+}
+
+#ubs-stats li {
+  color: #ffffff;
+}
+
+/* #ubs-stats li:hover > div > span > strong{
+    font-size: 80px;
+    line-height: 86px;
+} */
+#get-in-touch {
+  position: relative;
+}
+
+#get-in-touch:before {
+  content: "";
+  width: 100%;
+  height: 275px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+}
+
+#trusted-industry-22 {
+  background: #fbfbfb;
+}
+
+#trusted-industry-22 ul.grey-item-list > li {
+  width: calc(100% / 6);
+  border: 0;
+}
+
+ul#testimonials-slider.testimonials-22 li {
+  display: flex;
+}
+
+ul#testimonials-slider.testimonials-22 .testimonial-video {
+  position: static;
+  width: 60%;
+}
+
+ul#testimonials-slider.testimonials-22 .testimonial-text {
+  width: 40%;
+  background: #eeeeef;
+  color: #000000;
+  padding: 40px;
+}
+
+ul#testimonials-slider.testimonials-22 .testimonial-text .ts-wrap {
+  width: 100%;
+}
+
+ul#testimonials-slider.testimonials-22 .testimonial-text .ts-wrap > p {
+  padding-right: 0;
+}
+
+ul#testimonials-slider.testimonials-22 .ts-title {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+ul#testimonials-slider.testimonials-22 .ts-title h5 {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 36px;
+}
+
+ul#testimonials-slider.testimonials-22 .ts-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  height: 6px;
+  width: 150px;
+  background: #009ad4;
+}
+
+ul#testimonials-slider.testimonials-22 .ts-count {
+  position: absolute;
+  left: auto;
+  right: 55px;
+  bottom: 30px;
+}
+
+ul#testimonials-slider.testimonials-22 span.ts-client-name {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #009ad4 !important;
+}
+
+ul#testimonials-slider.testimonials-22 span.ts-client-name:before {
+  display: none;
+}
+
+span.cs-story {
+  color: #009ad4;
+  font-size: 18px !important;
+}
+
+.sap-byd #form-section {
+  background: #073674 url("./images/2022/sap-byd-banner-bg.jpg") no-repeat
+    center center;
+  padding: 70px 0;
+}
+
+#about-byd-starter {
+  background: #ffffff url("./images/2022/about-byd-bg.jpg") no-repeat center top;
+}
+
+ul#industry-vertical {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul#industry-vertical.sap-byd-ch > li {
+  background: #eeeeef;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#industry-vertical.sap-byd-ch li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+#industry-vertical.sap-byd-ch > li:hover {
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+ul.default {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+ul.default li {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  color: #343a40;
+  background: url("./images/list-blue-tick.png") no-repeat left top 6px;
+}
+
+ul.default {
+  margin-top: 30px;
+}
+ul.default.tab-offfer li {
+  background: url("./images/2022/tick-orange.png") no-repeat left top 1px;
+}
+ul.default-22 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul.default-22 li {
+  width: 50%;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 15px;
+  color: #ffffff;
+  background: url("./images/2022/white-tick.png") no-repeat left top 6px;
+}
+#industry-vertical.sap-byd-ch > li .module-img {
+  position: relative;
+}
+
+#industry-vertical.sap-byd-ch > li .module-img:before {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: #8a1d59;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+.contact-popup-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 15px;
+  z-index: 9998;
+  text-decoration: none !important;
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+.contact-popup-widget .contact-popup {
+  display: table-cell;
+  width: auto;
+  height: 45px;
+  padding: 0 30px;
+  border-radius: 3px;
+  box-shadow: rgb(0 0 0 / 25%) 0 2px 5px;
+  font-family: sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  background: #119BFF;
+  color: rgb(255, 255, 255);
+}
+.contact-popup-widget .contact-popup:hover{
+  background: #1b1d41;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+#sfi-pills-tab.nav-pills .nav-link {
+  color: #cfd6e2;
+  background: none;
+  text-align: left;
+  padding-left: 0 !important;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+#sfi-pills-tab.nav-pills .nav-link.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#sfi-pills-tab.nav-pills .nav-link.active::before {
+  content: "⟶";
+  color: #00a1d6;
+  padding-right: 10px;
+}
+
+#sfi-pills-tabContent {
+  position: relative;
+}
+
+#industries-section .default li {
+  color: #000000;
+}
+
+/* Tableau 22 start */
+.orange {
+  color: #e47c31;
+}
+
+.page-template-tableau-software-22 {
+  font-family: "Lato", sans-serif !important;
+}
+
+.tableau-22,
+.tableu-license-22 {
+  background: linear-gradient(
+    to right,
+    #1b389f 0%,
+    #1b389f 57%,
+    #f5f9ff 57%,
+    #f5f9ff 100%
+  );
+  width: 100%;
+  float: left;
+}
+
+.tab-banner-bottom {
+  position: absolute;
+  bottom: -54px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#tableau-1,
+#keyfeature-22,
+#tableau-features-22,
+#industry-verticals {
+  width: 100%;
+  float: left;
+}
+
+#tableau-features-22,
+#industry-verticals {
+  background: #f5f9ff;
+}
+
+#exp-video-22 {
+  width: 100%;
+  float: left;
+  background: linear-gradient(274.36deg, #1d366d 53.64%, #e66f1a 99.55%);
+  mix-blend-mode: normal;
+}
+
+#keyfeature-22 ul.default {
+}
+
+ul.group-of-clients {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.group-of-clients > li {
+  float: left;
+  width: calc(100% / 5);
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  min-height: 98px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+ul.group-of-clients > li:nth-child(5n + 1) {
+  border-left: 1px solid #ececec;
+}
+
+ul.group-of-clients > li:nth-child(-n + 5) {
+  border-top: 1px solid #ececec;
+}
+
+ul.group-of-clients > li img {
+  max-width: 150px;
+}
+
+#tableaupartner-22 {
+  background: #f5f9ff url("./images/2022/tableau-partner-bg.png") no-repeat left
+    top;
+}
+
+ul#tab-stats-22 {
+  float: left;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tableu-license-22 ul#tab-stats-22 {
+  width: 70%;
+}
+
+ul#tab-stats-22 li {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% / 3) - 10px);
+  background-color: #ffffff;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 15px;
+  justify-content: start;
+  align-items: start;
+  border-radius: 5px;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.15);
+}
+.tableu-license-22 ul#tab-stats-22 li {
+  width: calc((100% / 3) - (20px / 3));
+  margin-left: 10px;
+  padding: 15px 8px;
+}
+
+ul#tab-stats-22 li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+ul#tab-stats-22 li:nth-child(-3 + n) {
+  margin-top: 0;
+}
+
+#tab-features-22 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tab-features-22 li {
+  width: calc((100% / 3) - (40px / 3));
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#tab-features-22 li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+#tab-features-22 li .icon {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+#tab-features-22 li .icon:before {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: #008066;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#industry-verticals #wide-slider .owl-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* position: absolute;
+  left: -50%;
+  bottom: 30px; */
+}
+
+#industry-verticals #wide-slider.owl-carousel .owl-stage {
+  display: flex;
+  padding: 20px 0;
+}
+
+#industry-verticals #wide-slider .owl-stage .owl-item {
+  background: #ffffff;
+  box-shadow: 6px 6px 6px 1px rgba(171, 171, 171, 0.22);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#industry-verticals ul#wide-slider li {
+  padding: 0;
+}
+
+ul.riseit-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+ul.riseit-list li {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 900;
+  color: white;
+  padding: 0 30px;
+  border-left: 1px solid #ffffff;
+}
+
+ul.riseit-list li:first-child {
+  padding-left: 0;
+  border: 0;
+}
+
+ul.riseit-list li:last-child {
+  padding-right: 0;
+}
+span.dy-border {
+  position: relative;
+}
+span.dy-border:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(270deg, #f9cd4b 50%, #e2834b 100%);
+  transform: rotate(180deg);
+}
+
+#riseit-head {
+  background: linear-gradient(90deg, #4da5e6 0%, #407cd5 100%);
+}
+
+#riseit {
+  background: #314ba8 url("./images/2022/rise-with-it-bg.jpg") no-repeat right
+    bottom;
+}
+ul.tableau-plan {
+  width: 100%;
+  display: flex;
+}
+ul.tableau-plan > li {
+  width: calc((100% / 3 - 10px));
+  padding: 30px 30px 80px 30px;
+  margin-left: 20px;
+  border: 1px solid #b3b0b0;
+  border-radius: 4px;
+}
+ul.tableau-plan > li p {
+  font-size: 16px;
+}
+ul.tableau-plan > li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+ul.tableau-plan > li:first-child {
+  background: url("./images/2022/creator-plan-bg.png") no-repeat bottom left;
+}
+ul.tableau-plan > li:nth-child(2) {
+  background: url("./images/2022/explorer-plan-bg.png") no-repeat bottom left;
+}
+ul.tableau-plan > li:nth-child(3) {
+  background: url("./images/2022/viewer-plan-bg.png") no-repeat bottom left;
+}
+ul.tableau-plan > li ul.default li {
+  background: url("./images/2022/check-red.png") no-repeat left top 6px;
+  margin-bottom: 5px;
+}
+ul.tableau-plan > li:nth-child(2) ul.default li {
+  background: url("./images/2022/check-orange.png") no-repeat left top 6px;
+}
+
+ul.tableau-plan > li:nth-child(3) ul.default li {
+  background: url("./images/2022/check-green.png") no-repeat left top 6px;
+}
+#readyto-choose {
+  width: 100%;
+  float: left;
+  /* background: linear-gradient(360deg, #0472D7 0%, #1AA4F2 100%), url('./images/2022/tableau-wave.png') no-repeat left bottom ; */
+  background: #0472d7 url("./images/2022/tableau-wave.png") no-repeat left
+    bottom;
+}
+.tableu-license-22 {
+  position: relative;
+}
+.tableu-license-22::before {
+  content: "";
+  background: url("./images/2022/tableau-license-top-left-prof-bg.png")
+    no-repeat;
+  left: 40.2%;
+  bottom: 0;
+  position: absolute;
+  width: 257px;
+  height: 350px;
+}
+.tnc-div {
+  border: 1px solid #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+}
+ul.tnc-list {
+  width: 100%;
+}
+ul.tnc-list li {
+  font-size: 8px;
+  line-height: 12px;
+  color: #ffffff;
+}
+/* .tableu-license-22 #form-section{
+    background: url('./images/2022/tableau-license-top-left-bg.png') no-repeat right bottom;
+} */
+ul#grab-offer {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul#grab-offer li {
+  width: calc((100% / 4) - (45px / 4));
+  background: #ffffff;
+  margin-left: 15px;
+  padding: 15px;
+}
+ul#grab-offer li:nth-child(4n + 1) {
+  margin-left: 0;
+}
+.border-warning {
+  border-color: #e47c31 !important;
+}
+
+#wide-slider .owl-nav,
+.testimonials .owl-nav {
+  margin-top: 20px;
+}
+
+#wide-slider .owl-next {
+  position: relative;
+  background: url("./images/next.png") no-repeat !important;
+  width: 25px;
+  height: 18px;
+  text-indent: -2000px;
+  margin-left: 15px;
+  vertical-align: top;
+}
+
+#wide-slider .owl-prev {
+  background: url("./images/previous.png") no-repeat !important;
+  width: 25px;
+  height: 18px;
+  text-indent: -1000px;
+  vertical-align: top;
+}
+
+#wide-slider .owl-next:before,
+.testimonials .owl-next:before {
+  content: "|";
+  display: block;
+  background: url("./images/after-line.png") no-repeat;
+  width: 1px;
+  position: absolute;
+  top: -8px;
+  left: -7px;
+  height: 35px;
+  text-indent: -5000px;
+}
+ul#ubs-city{
+  float: left;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+ul#ubs-city li {
+  display: flex;
+  width: calc(100% / 9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul#ubs-city li:first-child {
+  padding-left: 0;
+}
+/* Responsive */
+@media only screen and (max-width: 1400px) {
+  .tableu-license-22::before {
+    content: "";
+    background: url("./images/2022/tableau-license-top-left-prof-bg.png")
+      no-repeat;
+    left: 38.7%;
+    bottom: 0;
+    position: absolute;
+    width: 257px;
+    height: 350px;
+  }
+  .tableau-22,
+  .tableu-license-22 {
+    background: linear-gradient(
+      to right,
+      #1b389f 0%,
+      #1b389f 57.5%,
+      #f5f9ff 57.5%,
+      #f5f9ff 100%
+    );
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  div#customer-form {
+    padding: 15px;
+  }
+
+  #customer-form .wpcf7 .wpcf7-form .input-field,
+  #contactPopup .wpcf7 .wpcf7-form .input-field {
+    margin-top: 0.5rem !important;
+    width: 100%;
+  }
+
+  #customer-form .wpcf7 .wpcf7-form input:not(.browser-default),
+  #contactPopup .wpcf7 .wpcf7-form input:not(.browser-default) {
+    height: 2rem;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+  }
+
+  #customer-form .wpcf7 .wpcf7-form .input-field label,
+  #contactPopup .wpcf7 .wpcf7-form .input-field label {
+    font-size: 14px;
+    transform: translateY(5px);
+  }
+
+  #customer-form .wpcf7 .wpcf7-form .input-field label:not(.label-icon).active,
+  #contactPopup .wpcf7 .wpcf7-form .input-field label:not(.label-icon).active {
+    transform: translateY(-10px) scale(0.8);
+    transform-origin: 0 0;
+  }
+
+  .form-heading h4 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .underline {
+    font-size: 36px;
+  }
+
+  #header .out-body {
+    background-size: 640px;
+  }
+
+  #customer-form {
+    min-height: auto;
+  }
+
+  #customer-form .wpcf7-form,
+  #contactPopup .wpcf7-form {
+    padding: 10px 10px;
+  }
+
+  
+
+  .customer-text p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mr15 {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .sap-implementation .form-heading h4 {
+    font-size: 24px;
+  }
+
+  .offering-list > ul {
+    max-width: 870px;
+    margin: 0 auto;
+    background: #ffffff;
+    width: 100%;
+    min-height: 200px;
+    padding: 40px 60px;
+    -webkit-box-shadow: -1px -8px 97px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: -1px -8px 97px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: -1px -8px 97px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .offering-list > ul > li {
+    width: 50%;
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    color: #212121;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    background: url(images/blue-tick.png) no-repeat left 2px;
+    background-size: 15px;
+  }
+
+  .sapb1-gujarat .processlistbox {
+    width: 265px;
+  }
+
+  ul.offering-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ul.offering-ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(25% - 11.25px);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  ul.offering-ul > li:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  div#top-logo img {
+    max-width: 100%;
+  }
+
+  #header .out-body {
+    min-height: auto;
+    background-position: 100% -36px !important;
+    background-size: 50%;
+  }
+
+  .underline {
+    font-size: 30px;
+  }
+
+  #wide-array:before {
+    display: none;
+  }
+
+  #wide-array h3 {
+    color: #000000;
+  }
+
+  #wide-array p {
+    color: #000000;
+  }
+
+  .unee-stats ul {
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .unee-stats {
+    box-shadow: none;
+    padding: 20px 0;
+  }
+
+  .unee-stats ul li {
+    width: 50%;
+    padding: 10px 10px;
+    border-top: 1px solid #cacaca;
+    border-left: 1px solid #cacaca;
+    font-size: 12px;
+  }
+
+  .unee-stats ul li:nth-child(2n + 1) {
+    border-left: none;
+  }
+
+  .unee-stats ul li:nth-child(1),
+  .unee-stats ul li:nth-child(2) {
+    border-top: 0;
+  }
+
+  #header .out-body:after {
+    display: none !important;
+  }
+
+  .floating-wide-box {
+    width: 100%;
+    position: static;
+  }
+
+  ul#wide-slider li {
+    width: 100% !important;
+  }
+
+  #business-one-process .processlistbox {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #business-one-process-new .processlistbox {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .form-heading h4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .wpcf7-form .select-wrapper {
+    width: 100%;
+  }
+
+  #contactPopup .wpcf7 .wpcf7-form input:not(.browser-default) {
+    margin: 0 0 12px 0;
+  }
+
+  .pt100 {
+    padding-top: 30px;
+  }
+
+  #header .out-body:before {
+    display: none;
+  }
+
+  div#customer-form {
+    margin-top: 20px;
+  }
+
+  .pt80 {
+    padding-top: 30px;
+  }
+
+  section#wide-array.pt80 {
+    padding: 0;
+  }
+
+  .pt50 {
+    padding-top: 30px;
+  }
+
+  .offering-list > ul {
+    width: 100%;
+    padding: 20px 15px;
+    float: left;
+  }
+
+  .offering-list > ul > li {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .sapb1-gujarat .processlistbox {
+    width: 100%;
+  }
+
+  .fs60 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  body.page-template-sap-roundtable-event header {
+    height: auto;
+  }
+
+  #header .out-body.sap-roundtable {
+    padding-bottom: 50px;
+  }
+
+  .fs24 {
+    font-size: 20px;
+  }
+
+  .fs20 {
+    font-size: 16px;
+  }
+
+  .cc-img {
+    background-size: 50%;
+    top: -75px;
+  }
+
+  a.scrollup {
+    top: -25px;
+    right: 15px;
+  }
+
+  a.scrollup img {
+    width: 45px;
+  }
+
+  .lh34 {
+    line-height: 24px;
+  }
+
+  .fs34 {
+    font-size: 25px;
+  }
+
+  .lh44 {
+    line-height: 30px;
+  }
+
+  .sap-roundtable #form-section .pt100 {
+    padding-top: 0;
+  }
+
+  .sap-roundtable #form-section h1 {
+    margin-bottom: 0;
+  }
+
+  .sap-roundtable #form-section p {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  ul.grey-item-list > li {
+    width: calc(100% / 2);
+    border: 1px solid #ececec;
+  }
+
+  .sap-license .bg-light {
+    padding: 15px;
+  }
+
+  /* Awards Start*/
+  #inner-awards,
+  #inner-awards.inner-awards-22 {
+    background: #f2f2f2 !important;
+  }
+
+  ul.award-list li {
+    width: calc(100% / 2);
+    border-left: 1px solid #d2d2d2 !important;
+    border-top: 1px solid #d2d2d2 !important;
+  }
+
+  ul.award-list li:nth-child(2n + 1) {
+    border-left: 0 !important;
+  }
+
+  ul.award-list li:nth-child(-n + 2) {
+    border-top: 0 !important;
+  }
+
+  /* Awards End */
+
+  ul#testimonials-slider li {
+    padding-top: 284px;
+  }
+
+  .testimonial-video {
+    top: 0;
+    width: 100%;
+    height: 284px;
+  }
+
+  .testimonial-text {
+    padding: 50px 15px;
+  }
+
+  .ts-wrap {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ts-title span::before {
+    left: 50%;
+    margin-left: -15px;
+    height: 4px;
+    width: 30px;
+    bottom: -11px;
+  }
+
+  .ts-wrap > p {
+    padding-right: 0px;
+  }
+
+  span.ts-client-name i:after {
+    display: none;
+  }
+
+  #testimonials-slider .owl-nav {
+    bottom: 0;
+    top: 264px;
+    right: 50%;
+    margin-right: -44px;
+    height: auto;
+  }
+
+  section#client-tesimonials {
+    padding-bottom: 0px;
+  }
+
+  #header .sap-erp-22 {
+    background-image: linear-gradient(
+      to bottom,
+      #1290cf,
+      #1290cf,
+      #1290cf,
+      #1290cf,
+      #1290cf,
+      #4596d2,
+      #609cd5,
+      #76a3d7,
+      #9db2dc,
+      #bcc3e0,
+      #d5d6e5,
+      #eaeaea
+    );
+  }
+
+  /* s4hana 2022 */
+  .fs44 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .sap-s4hana #form-section {
+    background-position: top center;
+    padding: 30px 0;
+  }
+
+  #s4hana-features li {
+    width: calc((100%));
+    border: 1px solid #00a4de;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  #s4hana-features.list-5 li {
+    width: 50%;
+    margin-left: 00 !important;
+  }
+
+  #ubs-stats {
+    flex-wrap: wrap;
+  }
+
+  #ubs-stats li {
+    width: 50%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  #trusted-industry-22 ul.grey-item-list > li {
+    width: calc(100% / 2);
+  }
+
+  ul#testimonials-slider.testimonials-22 li {
+    flex-flow: column;
+    padding-top: 0;
+  }
+
+  ul#testimonials-slider.testimonials-22 .testimonial-text,
+  ul#testimonials-slider.testimonials-22 .testimonial-video {
+    width: 100%;
+    height: auto;
+  }
+
+  #get-in-touch {
+    /* position: static; */
+  }
+
+  #get-in-touch:before,
+  .inner-body-22 section#inner-awards.inner-awards-22:before,
+  br {
+    display: none;
+  }
+
+  ul#testimonials-slider.testimonials-22 .ts-title::before {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  ul#testimonials-slider.testimonials-22 .ts-count {
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  ul#testimonials-slider.testimonials-22 .owl-nav {
+    top: -20px;
+  }
+
+  ul#testimonials-slider.testimonials-22 .ts-count span.cs-story {
+    color: #009ad4;
+    font-size: 14px !important;
+  }
+
+  .pt-70 {
+    padding-top: 30px;
+  }
+
+  .pb-70 {
+    padding-bottom: 30px;
+  }
+
+  .sap-byd #form-section {
+    background-color: #54bdea;
+    background-position: center bottom;
+  }
+
+  ul#verticallist li {
+    width: calc(100% / 2);
+  }
+
+  ul#unee-stats-22 li {
+    width: calc((100% / 2) - 7.5px);
+    margin-left: 15px !important;
+    flex-flow: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  ul#unee-stats-22 li:nth-child(2n + 1) {
+    margin-left: 0 !important;
+  }
+  #unee-stats-22 li .ml-3.d-flex.flex-column {
+    gap: 10px;
+    margin: 0 !important;
+}
+
+  ul#industry-vertical > li {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .sap-s4hana {
+    background: #00a2dc;
+  }
+
+  .top-heading {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .h1,
+  .display-3 {
+    font-size: 30px;
+  }
+
+  .tableau-22,
+  .tableu-license-22 {
+    background: #ffffff;
+    position: relative;
+  }
+
+  .tab-banner-bottom {
+    display: none;
+  }
+
+  .tableau-22 h1 {
+    color: #043673 !important;
+  }
+
+  .tableau-22 p.text-white {
+    color: #000000 !important;
+  }
+
+  #tab-features-22 li {
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    flex-direction: column;
+    border: 1px solid #aeaeae;
+    padding: 10px;
+  }
+
+  ul.group-of-clients > li {
+    width: calc(100% / 2);
+  }
+
+  ul.group-of-clients > li:nth-child(2n + 1) {
+    border-left: 1px solid #ececec;
+  }
+
+  ul#tab-stats-22 > li {
+    width: calc((100% / 2) - 7.5px);
+    margin-left: 15px;
+    padding: 15px 10px;
+  }
+
+  ul#tab-stats-22 > li:nth-child(2n + 1) {
+    margin-left: 0;
+  }
+
+  .testimonial-video {
+    background: #043673;
+  }
+
+  ul.riseit-list {
+    flex-direction: column;
+  }
+
+  ul.riseit-list li {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  #riseit {
+    background: #314ba8;
+  }
+  .tableu-license-22::before {
+    display: none;
+  }
+  .tableu-license-22 .display-3 {
+    color: #043673 !important;
+  }
+  .tableu-license-22 .h5 {
+    color: #000000 !important;
+  }
+  .tableu-license-22 ul#tab-stats-22 {
+    width: 100%;
+  }
+  .tableu-license-22 ul#tab-stats-22 li {
+    width: calc((100% / 2) - 7.5px);
+    padding: 15px 8px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 30%);
+  }
+  ul.tableau-plan {
+    flex-direction: column;
+  }
+  ul.tableau-plan > li {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .tnc-div.mt-2 {
+    width: 100%;
+  }
+
+  #header .sap-erp-offer-22,
+  #header .tableau-offer-22 {
+    background: #365db8;
+  }
+  ul.default-22 li {
+    width: 100%;
+  }
+  .sap-erp-offer-22 .form-heading h3,
+  .sap-erp-offer-22 .form-heading p,
+  .tableau-offer-22 .form-heading h3,
+  .tableau-offer-22 .form-heading p {
+    color: white;
+  }
+
+  ul#verticallist li:nth-child(2n + 1) {
+    border-left: 0;
+  }
+  ul#grab-offer li {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+  ul#tab-stats-22 > li {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  ul.group-of-clients > li img {
+    max-width: 125px;
+  }
+  ul#ubs-city{ 
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  ul#ubs-city li {
+    width: calc((100% / 3) - 10px);
+  }
+  ul#ubs-city li:nth-child(2n+1) {
+    padding-left: 0;
+  }
+  .why-choose-area .d-flex.justify-content-around {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .why-choose-area .d-flex.justify-content-around .align-items-center.d-flex.flex-column {
+      width: 40%;
+  }
+  .exp-new .youtube {
+    margin-bottom: 30px;
+  }
+  .page-template-sap-for-pharma #customer-form-22 .form-heading {
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+}
+@media only screen and (max-width: 375px) {
+  ul#verticallist span[class*="icon-"] i {
+    left: 7px;
+  }
+  ul#verticallist li span {
+    padding: 0px 20px 0 42px;
+    font-size: 10px;
+  }
+}

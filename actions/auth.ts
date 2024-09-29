@@ -1,7 +1,6 @@
 import { imageToObject } from "@/hook/image-to-object";
 import { toast } from "@/hooks/use-toast";
 import axios from "axios";
-import { NextResponse } from "next/server";
 
 interface UserData {
   username: string;

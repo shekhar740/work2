@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://www2.uneecops.com/l/1078442/2024-09-26/9q7rz3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!--<base href="">--><base href=".">
+		
+		
+		<meta name="description" content="">
+		<title></title>
+		<style type="text/css">
+		    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800;900&display=swap");
+             body,
+            html,
+            * {
+                font-family: "Public Sans", sans-serif;
+            }
+            *,
+            :after,
+            :before {
+                box-sizing: border-box;
+            }
+            body,
+            html {
+                padding: 0;
+                margin: 0;
+                font-size: 62.5%;
+                -webkit-font-smoothing: antialiased;
+                -webkit-text-size-adjust: none;
+            }
+            figure,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            hr,
+            ol,
+            p,
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+            li,
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sap-pardot {
+                display: flex;
+                flex-direction:column;
+            }
+            .sap-pardot li {
+                position: relative;
+                margin-bottom: 15px;
+            }
+            .sap-pardot li:first-child {
+                margin-top: 5px;
+            }
+            .sap-pardot li input,
+            .sap-pardot li textarea,
+            .sap-pardot li select {
+                width: 100%;
+                padding: 10px 10px;
+                box-sizing: border-box;
+                border-radius: unset;
+                border: 1px solid #000000;
+                background-color: #ffffff;
+            }
+            .sap-pardot li input.placeholder,
+            .sap-pardot li textarea.placeholder,
+            .sap-pardot li select.placeholder {
+                color: #292929;
+            }
+            .sap-pardot li input:-moz-placeholder,
+            .sap-pardot li textarea:-moz-placeholder,
+            .sap-pardot li select:-moz-placeholder {
+                color: #292929;
+            }
+            .sap-pardot li input::-moz-placeholder,
+            .sap-pardot li textarea::-moz-placeholder,
+            .sap-pardot li select::-moz-placeholder {
+                color: #292929;
+            }
+            .sap-pardot li input:-ms-input-placeholder,
+            .sap-pardot li textarea:-ms-input-placeholder,
+            .sap-pardot li select:-ms-input-placeholder {
+                color: #292929;
+            }
+            .sap-pardot li input::-webkit-input-placeholder,
+            .sap-pardot li textarea::-webkit-input-placeholder,
+            .sap-pardot li select::-webkit-input-placeholder {
+                color: #292929;
+            }
+            .sap-pardot li input:focus-visible,
+            .sap-pardot li textarea:focus-visible,
+            .sap-pardot li select:focus-visible {
+                outline: unset;
+            }
+            
+            .sap-pardot li textarea{
+                height: 66px;
+            }
+            .sap-pardot li select {
+                color: var(--heading-color);
+            }
+            .sap-pardot .error input,
+            .sap-pardot .error select{
+                border: 1px solid red;
+                background-color: #fff1f1;
+            }
+
+            .overlay-btn .btn-primary {
+                border: unset;
+                margin-top: 15px;
+            }
+            a,
+            button,
+            img,
+            input[type="submit"] {
+                text-decoration: none;
+                outline: none;
+                border: 0;
+            }
+            .btn-primary,
+            .btn-sc {
+                display: inline-block;
+                font-size: 1.4rem;
+                letter-spacing: 0.2rem;
+                font-weight: 700;
+                text-align: center;
+                text-decoration: none;
+                vertical-align: middle;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+                transition: all 0.3s ease-in-out;
+            }
+            .btn-primary {
+                line-height: 1.5;
+                background-color: #48a0d7;
+                color: #fff;
+                padding: 1.6rem 2.4rem;
+            }
+            .sap-btn-primary {
+                display: block;
+                width: 100%;
+                font-size: 1.8rem;
+                font-weight: 700;
+                text-align: center;
+                vertical-align: middle;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+                transition: all 0.3s ease-in-out;
+                line-height: 1.5;
+                background-color: #ffb200;
+                color: #000;
+                padding: 0.76rem 2.4rem;
+                text-transform: uppercase;
+            }
+            form.form p.errors{
+                font-size: 10px;
+            }
+            form.form p.no-label{
+                position: absolute;
+                margin-left:0 !important;
+                font-size: 10px;
+            }
+            form.form p.submit{
+                margin-left: 0 !important;
+            }
+            .sap-pardot li input[type="checkbox"] {
+                display: inline-block;
+                width: auto;
+            }
+            
+            .sap-pardot li p.pd-checkbox {
+                position: static;
+                font-size:16px;
+            }
+            .sap-pardot li p.pd-checkbox label{
+                display:inline-block !important;
+            }
+            .sap-pardot li.pd-hidden {
+                margin:0;
+            }
+            
+            /* General input and select styling */
+
+.form-field {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Styling for focused or non-empty inputs */
+input:focus, 
+select:focus,
+textarea:focus{
+  border-color: #007bff; /* Focus border color */
+}
+
+/* Label Styling */
+label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: #999999; /* Placeholder color */
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-size: 1.4rem;
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: left top;
+}
+
+/* Placeholder behavior - floating label */
+.float-label {
+  transform: translateY(-1.8rem) scale(0.75);
+  padding: 0 0.35rem;
+  background-color: #ffffff; /* Background color for floating label */
+  color: #007bff; /* Floating label color */
+}
+
+/* Maintain floating label when input has value on refresh */
+input:not(:placeholder-shown) + label,
+select:not([value=""]) + label,
+textarea:not(:placeholder-shown) + label {
+  transform: translateY(-1.8rem) scale(0.75);
+  color: #007bff; /* Floating label color when input is filled */
+}
+
+
+            @media only screen and (max-width: 450px) {
+                @-ms-viewport{
+                    width: device-width;
+                }
+            }
+
+		</style>
+	<script type="text/javascript" src="./pd.js"></script><script type="text/javascript" src="./piUtils.js"></script><script type="text/javascript">
+piAId = '1079442';
+piCId = '157551';
+piHostname = 'www2.uneecops.com';
+if(!window['pi']) { window['pi'] = {}; } pi = window['pi']; if(!pi['tracker']) { pi['tracker'] = {}; } pi.tracker.pi_form = true;
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script><script type="text/javascript" src="https://www2.uneecops.com/analytics?ver=3&amp;pi_form=true&amp;visitor_id=945188357&amp;visitor_id_sign=50b564f0dc1c09910a080ba9c21b3a7e8c21d0a44860497a368c78114898d21b5f47ef01b5e974b0ae65a6337e6d068bea716674&amp;pi_opt_in=&amp;campaign_id=157551&amp;account_id=1079442&amp;title=&amp;url=https%3A%2F%2Fwww2.uneecops.com%2Fl%2F1078442%2F2024-09-26%2F9q7rz3&amp;referrer=https%3A%2F%2Funeecops.com%2F"></script></head>
+	<body>
+		<form accept-charset="UTF-8" method="post" action="https://www2.uneecops.com/l/1078442/2024-09-26/9q7rz3" class="form" id="pardot-form">
+
+<style type="text/css">
+form.form p label { color: #000000; }
+</style>
+
+
+
+
+
+	
+		
+ <ul class="sap-pardot">
+		
+			    
+        			<li class="form-field  last_name pd-text required    ">
+        				
+        					<label class="field-label" for="1078442_303698pi_1078442_303698">Name</label>
+        				
+                            
+        				<input type="text" name="1078442_303698pi_1078442_303698" id="1078442_303698pi_1078442_303698" value="" class="text" size="30" maxlength="80" onchange="" onfocus="">
+        				
+        				
+        				
+        				<p id="error_for_1078442_303698pi_1078442_303698" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  email pd-text required    ">
+        				
+        					<label class="field-label" for="1078442_303701pi_1078442_303701">Business Email Address</label>
+        				
+                            
+        				<input type="text" name="1078442_303701pi_1078442_303701" id="1078442_303701pi_1078442_303701" value="" class="text" size="30" maxlength="255" onchange="" onfocus="">
+        				
+        				
+        				
+        				<p id="error_for_1078442_303701pi_1078442_303701" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  phone pd-text required    ">
+        				
+        					<label class="field-label" for="1078442_303704pi_1078442_303704">Phone</label>
+        				
+                            
+        				<input type="text" name="1078442_303704pi_1078442_303704" id="1078442_303704pi_1078442_303704" value="" class="text" size="30" maxlength="40" onchange="" onfocus="">
+        				
+        				
+        				
+        				<p id="error_for_1078442_303704pi_1078442_303704" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  company pd-text required    ">
+        				
+        					<label class="field-label" for="1078442_303707pi_1078442_303707">Company</label>
+        				
+                            
+        				<input type="text" name="1078442_303707pi_1078442_303707" id="1078442_303707pi_1078442_303707" value="" class="text" size="30" maxlength="255" onchange="" onfocus="">
+        				
+        				
+        				
+        				<p id="error_for_1078442_303707pi_1078442_303707" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  state pd-select required    ">
+        				
+        					<label class="field-label" for="1078442_303710pi_1078442_303710">Select State</label>
+        				
+                            
+        				<select name="1078442_303710pi_1078442_303710" id="1078442_303710pi_1078442_303710" class="select" onchange=""><option value="" selected="selected"></option>
+<option value="3888395">Select State*</option>
+<option value="3888506">Andaman and Nicobar Islands</option>
+<option value="3888398">Andhra Pradesh</option>
+<option value="3888401">Arunachal Pradesh</option>
+<option value="3888404">Assam</option>
+<option value="3888407">Bihar</option>
+<option value="3888410">Chandigarh</option>
+<option value="3888413">Chhattisgarh</option>
+<option value="3888416">Dadra and Nagar Haveli</option>
+<option value="3888419">Daman &amp; Diu</option>
+<option value="3888422">Delhi</option>
+<option value="3888425">Goa</option>
+<option value="3888428">Gujarat</option>
+<option value="3888431">Haryana</option>
+<option value="3888434">Himachal Pradesh</option>
+<option value="3888437">Jammu &amp; Kashmir</option>
+<option value="3888440">Jharkhand</option>
+<option value="3888443">Karnataka</option>
+<option value="3888446">Kerala</option>
+<option value="3888449">Ladakh</option>
+<option value="3888452">Lakshadweep</option>
+<option value="3888455">Madhya Pradesh</option>
+<option value="3888458">Maharashtra</option>
+<option value="3888461">Manipur</option>
+<option value="3888464">Meghalaya</option>
+<option value="3888467">Mizoram</option>
+<option value="3888470">Nagaland</option>
+<option value="3888473">Odisha</option>
+<option value="3888476">Puducherry</option>
+<option value="3888479">Punjab</option>
+<option value="3888482">Rajasthan</option>
+<option value="3888485">Sikkim</option>
+<option value="3888488">Tamil Nadu</option>
+<option value="3888491">Telangana</option>
+<option value="3888494">Tripura</option>
+<option value="3888497">Uttarakhand</option>
+<option value="3888500">Uttar Pradesh</option>
+<option value="3888503">West Bengal</option>
+</select>
+        				
+        				
+        				
+        				<p id="error_for_1078442_303710pi_1078442_303710" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  Total_Turnover pd-select required    ">
+        				
+        					<label class="field-label" for="1078442_303713pi_1078442_303713">Total Turnover</label>
+        				
+                            
+        				<select name="1078442_303713pi_1078442_303713" id="1078442_303713pi_1078442_303713" class="select" onchange=""><option value="" selected="selected"></option>
+<option value="3888509">Startup</option>
+<option value="3888512">05-10 Cr</option>
+<option value="3888515">11-50 Cr</option>
+<option value="3888518">51-100 Cr</option>
+<option value="3888521">101-200 Cr</option>
+<option value="3888524">201-300 Cr</option>
+<option value="3888527">301-500 Cr</option>
+<option value="3888530">above 500 Cr</option>
+</select>
+        				
+        				
+        				
+        				<p id="error_for_1078442_303713pi_1078442_303713" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  GCLID pd-hidden  hidden   ">
+        				
+                            
+        				<input type="hidden" name="1078442_303716pi_1078442_303716" id="1078442_303716pi_1078442_303716" value="">
+        				
+        				
+        				
+        				<p id="error_for_1078442_303716pi_1078442_303716" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  IP_Address pd-hidden  hidden   ">
+        				
+                            
+        				<input type="hidden" name="1078442_303719pi_1078442_303719" id="1078442_303719pi_1078442_303719" value="106.221.204.108">
+        				
+        				
+        				
+        				<p id="error_for_1078442_303719pi_1078442_303719" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+			    
+        			<li class="form-field  Prospect_URL pd-hidden  hidden   ">
+        				
+                            
+        				<input type="hidden" name="1078442_303722pi_1078442_303722" id="1078442_303722pi_1078442_303722" value="">
+        				
+        				
+        				
+        				<p id="error_for_1078442_303722pi_1078442_303722" style="display:none"></p>
+            			 
+        			</li>
+        			
+        			
+		
+</ul>
+		
+	<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+		<label for="pi_extra_field">Comments</label>
+		<input type="text" name="pi_extra_field" id="pi_extra_field">
+	</p>
+		
+
+		<!-- forces IE5-8 to correctly submit UTF8 content  -->
+		<input name="_utf8" type="hidden" value="☃">
+
+		<p class="submit">
+			<input class="sap-btn-primary" type="submit" accesskey="s" value="Submit">
+		</p>
+	
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+	var anchors = document.getElementsByTagName("a");
+	for (var i=0; i<anchors.length; i++) {
+		var anchor = anchors[i];
+		if(anchor.getAttribute("href")&&!anchor.getAttribute("target")) {
+			anchor.target = "_top";
+		}
+	}
+		
+//]]>
+</script>
+<input type="hidden" name="hiddenDependentFields" id="hiddenDependentFields" value=""></form><script type="text/javascript">(function(){ pardot.$(document).ready(function(){ (function() {
+	var $ = window.pardot.$;
+	window.pardot.FormDependencyMap = [];
+
+	$('.form-field-primary input, .form-field-primary select').each(function(index, input) {
+		$(input).on('change', window.piAjax.checkForDependentField);
+		window.piAjax.checkForDependentField.call(input);
+	});
+})(); });})();</script>
+		
+    	<script>
+        document.querySelectorAll('.form-field input').forEach(input => {
+    // When input gains focus
+    input.addEventListener('focus', function() {
+        const label = this.previousElementSibling;
+        if (label) {
+            label.classList.add('float-label');
+        }
+    });
+
+    // When input loses focus
+    input.addEventListener('blur', function() {
+        const label = this.previousElementSibling;
+        if (label && !this.value) {
+            label.classList.remove('float-label');
+        }
+    });
+
+    // Initial check for existing value
+    const label = input.previousElementSibling;
+    if (label && input.value) {
+        label.classList.add('float-label');
+    }
+});
+
+// For select elements, ensure the label floats when the select is changed
+document.querySelectorAll('.form-field select').forEach(select => {
+    // When select gains focus
+    select.addEventListener('focus', function() {
+        const label = this.previousElementSibling;
+        if (label) {
+            label.classList.add('float-label');
+        }
+    });
+
+    // When select loses focus
+    select.addEventListener('blur', function() {
+        const label = this.previousElementSibling;
+        if (label && !this.value) {
+            label.classList.remove('float-label');
+        }
+    });
+
+    // When the select changes
+    select.addEventListener('change', function() {
+        const label = this.previousElementSibling;
+        if (label) {
+            if (this.value) {
+                label.classList.add('float-label');
+            } else {
+                label.classList.remove('float-label');
+            }
+        }
+    });
+
+    // Initial check for selected value
+    const label = select.previousElementSibling;
+    if (label && select.value) {
+        label.classList.add('float-label');
+    }
+});
+// Floating label functionality for textarea elements
+document.querySelectorAll('.form-field textarea').forEach(textarea => {
+    textarea.addEventListener('focus', function() {
+        const label = this.previousElementSibling;
+        if (label) {
+            label.classList.add('float-label');
+        }
+    });
+
+    textarea.addEventListener('blur', function() {
+        const label = this.previousElementSibling;
+        if (label && !this.value) {
+            label.classList.remove('float-label');
+        }
+    });
+
+    const label = textarea.previousElementSibling;
+    if (label && textarea.value) {
+        label.classList.add('float-label');
+    }
+});
+
+        </script>
+        <script type="text/javascript">
+            // Function to get URL parameters by name
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        // Wait until the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Retrieve UTM parameters
+            var source = getParameterByName('utm_source');
+            var medium = getParameterByName('utm_medium');
+            var campaign = getParameterByName('utm_campaign');
+
+            // Set the values in the hidden fields if they exist
+            var sourceInput = document.querySelector("li.source input");
+            var mediumInput = document.querySelector("li.utm_medium input");
+            var campaignInput = document.querySelector("li.utm_campaign input");
+
+            if (sourceInput) sourceInput.value = source;
+            if (mediumInput) mediumInput.value = medium;
+            if (campaignInput) campaignInput.value = campaign;
+        });
+            </script>
+            <script>
+                window.addEventListener('message', function (event) {
+                    // List of allowed parent domains
+                    var allowedOrigins = [
+                        'https://www.uneecops.com',
+                        'https://uneecops.com',
+                        'https://www.ubsdigicloud.com',
+                        'https://www.google.com'
+                    ];
+            
+                    // Check if the event's origin matches any of the allowed origins
+                    if (!allowedOrigins.includes(event.origin)) {
+                        console.warn('Message received from unauthorized origin:', event.origin);
+                        return;
+                    }
+            
+                    // Check if the message contains the browser URL
+                    if (event.data && event.data.browserURL) {
+                        var hiddenInput = document.querySelector('.Prospect_URL input[type="hidden"]');
+                        if (hiddenInput) {
+                            hiddenInput.value = event.data.browserURL; // Set the browser URL
+                            console.log('Browser URL captured:', event.data.browserURL);
+                        }
+                    }
+                });
+            </script>
+
+
+            <script>
+                // Fetch IP address using a third-party service
+                fetch('https://api.ipify.org?format=json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Find the hidden input field within the form
+                        const ipField = document.querySelector('.IP_Address input[type="hidden"]');
+                        if (ipField) {
+                            ipField.value = data.ip; // Set the IP address
+                            console.log('Captured IP Address:', data.ip); // Log the IP address to the console
+                        }
+                    })
+                    .catch(error => console.error('Error fetching IP address:', error));
+            </script>
+	
+
+</body></html>

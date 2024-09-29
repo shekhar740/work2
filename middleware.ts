@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server';
 import { cookies } from 'next/headers';
 
 // Specify protected routes
-const protectedRoutes = ['/dashboard'];
+const protectedRoutes = ['/dashboard','/home'];
 
 export async function middleware(req: NextRequest) {
   const url = req.nextUrl;
@@ -19,5 +19,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/protected/:path*'],
+  matcher: ['/dashboard/:path*', '/protected/:path*','/home'],
 };
