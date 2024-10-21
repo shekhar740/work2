@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto } from "@next/font/google";
 import "./globals.css";
+import "jsvectormap/dist/jsvectormap.css";
+import "flatpickr/dist/flatpickr.min.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ReactQueryClientProviders } from "@/lib/react-query-client-provider";
 

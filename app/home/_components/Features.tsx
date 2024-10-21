@@ -8,7 +8,7 @@ import particleRight from "@/public/home/cirlceright.svg"
 import rightBlue from "@/public/home/rightblue.svg"
 export const Features = () => {
   return (
-    <div className=" mt-32  px-36 font-bold leading-7 tracking-wider relative">
+    <div className=" mt-32 md:px-8 lg:px-36 font-bold leading-7 tracking-wider relative">
       <h4 className="text-blue-700  text-center text-xl">Features</h4>
       <h1 className="text-5xl text-center mt-5 tracking-wider">
         Your Experience Gets Better And Better Over{" "}
@@ -64,7 +64,7 @@ export const Features = () => {
         purchases, and more, empowering you to make data-driven decisions for
         optimized operations and sustainable growth.
       </p>
-      <div className="grid lg:grid-cols-3 lg:gap-x-20 md:gap-x-10 md:grid-cols-2 grid-cols-1">
+      <div className="grid  lg:grid-cols-3 lg:gap-x-20 md:gap-x-5 md:grid-cols-2 grid-cols-1">
         {features.map((feature, index) => (
           <BoxFeature key={index} feature={feature} />
         ))}

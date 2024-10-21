@@ -11,6 +11,7 @@ import Down from "@/public/home/downshape.svg";
 import wave from "@/public/home/wave.svg";
 
 export const WhyChooseUs = () => {
+  console.log("choosse detedted")
   return (
     <section id="hero" className="w-full h-auto relative py-10">
       <div className="flex flex-col lg:flex-row md:gap-10 items-center lg:justify-around sm:gap-10">

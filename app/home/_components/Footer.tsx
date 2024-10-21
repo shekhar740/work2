@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="flex items-center justify-between mb-12">
           <div className="flex items-center text-white text-2xl">
             <i className="fab fa-slack"></i>
-            <span className="ml-2">CodingLab</span>
+            <span className="ml-2">Phone Store</span>
           </div>
           <div className="flex space-x-2">
             {[

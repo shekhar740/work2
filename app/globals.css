@@ -2,34 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.images {
-  background-image: url("/home/slate.png");
-  background-repeat: no-repeat;
-}
-.left-hero::after {
-  background-image: url("/home/landback.png");
-  background-repeat: no-repeat;
-}
-body {
-  margin: 0;
-  padding: 0 0;
-  box-sizing: border-box;
-  font-family: var(--font-roboto), sans-serif;
-}
-
-.shadow-hero{
-  box-shadow: 0px 0px 20rem 5rem blue;
-  position: absolute;
-  border-radius: 100%;
-  top: 10rem;
-left: 10rem;
-}
-.shadow1{
-  box-shadow: 0px 0px 20rem 5rem rgb(160, 90, 139);
-  position: absolute;
-  border-radius: 100%;
-  top: 5rem;
-}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -51,13 +23,14 @@ left: 10rem;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
+    --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -85,6 +58,7 @@ left: 10rem;
     --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
@@ -93,8 +67,48 @@ left: 10rem;
     @apply bg-background text-foreground;
   }
 }
-
-
-.login-bg{
-  background-image: linear-gradient(to right top, #d16ba5, #d174af, #d17eb9, #d087c2, #d090cb, #c98fcc, #c28ecd, #bb8dcd, #ab83c6, #9b79c0, #896fba, #7766b3);
+.shadow1{
+  box-shadow: 0px 0px 2rem 0.6rem white;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -10px;
 }
+.shadow2{
+  box-shadow: 0px 0px 2rem 1.3rem white;
+  border-radius: 100%;
+  position: absolute;
+  right: 2rem;
+  z-index: -10px;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
